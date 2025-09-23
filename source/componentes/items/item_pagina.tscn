@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bblj0ey40hflo"]
+
+[ext_resource type="Texture2D" uid="uid://dmso3yx827kat" path="res://source/componentes/items/item_pagina.png" id="1_obce3"]
+[ext_resource type="Script" uid="uid://dmd102msty74c" path="res://source/componentes/items/item_pagina.gd" id="1_rt2b8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt2b8"]
+
+[node name="item_pagina" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_rt2b8")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+position = Vector2(1.19209e-07, 5.96046e-08)
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("1_obce3")
+
+[node name="CShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rt2b8")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

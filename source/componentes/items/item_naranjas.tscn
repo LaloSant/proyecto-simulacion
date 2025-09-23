@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqd88yxl6imvi"]
+
+[ext_resource type="Texture2D" uid="uid://d137qkbigxag4" path="res://source/componentes/items/Costal de naranjas.png" id="1_86cer"]
+[ext_resource type="Script" uid="uid://dlfniosu34mqi" path="res://source/componentes/items/item_naranjas.gd" id="1_vc1kf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6251g"]
+
+[node name="ItemNaranjas" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_vc1kf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_86cer")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6251g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

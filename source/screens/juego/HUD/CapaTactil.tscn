@@ -1,0 +1,142 @@
+[gd_scene load_steps=24 format=3 uid="uid://copq1rd75ls0h"]
+
+[ext_resource type="Script" uid="uid://v6etnnilaphu" path="res://source/screens/juego/HUD/capa_tactil.gd" id="1_e1p3u"]
+[ext_resource type="Texture2D" uid="uid://3gnfraol7v8f" path="res://resources/images/touch/A_unpressed.png" id="2_usplv"]
+[ext_resource type="Texture2D" uid="uid://dwoahrsnmjsie" path="res://resources/images/touch/pad_touch-unpressed.png" id="2_vctob"]
+[ext_resource type="Texture2D" uid="uid://c257cjpjydvod" path="res://resources/images/touch/pad_touch-pressed.png" id="3_0q7so"]
+[ext_resource type="Texture2D" uid="uid://cbnvt0ckol7vg" path="res://resources/images/touch/A_pressed.png" id="3_qhuhg"]
+[ext_resource type="Texture2D" uid="uid://cx27oscydrdyr" path="res://resources/images/touch/start_unpressedl.png" id="4_0ymrh"]
+[ext_resource type="Texture2D" uid="uid://bpjtjaifq48pn" path="res://resources/images/touch/back_unpressedl.png" id="4_hjps7"]
+[ext_resource type="Texture2D" uid="uid://bka7p0mr37fa4" path="res://resources/images/touch/B_unpressed.png" id="4_ku10b"]
+[ext_resource type="Texture2D" uid="uid://bju1omcoixm6d" path="res://resources/images/touch/start_pressedl.png" id="5_m80n5"]
+[ext_resource type="Texture2D" uid="uid://c7swvk7r0k0d" path="res://resources/images/touch/B_pressed.png" id="5_ugv2f"]
+[ext_resource type="Texture2D" uid="uid://csylpmdy6aey" path="res://resources/images/touch/back_pressedl.png" id="5_x6107"]
+[ext_resource type="Texture2D" uid="uid://beht56vxdj2ol" path="res://resources/images/touch/X_unpressed.png" id="6_xlaus"]
+[ext_resource type="Texture2D" uid="uid://c1xfglhidx0p0" path="res://resources/images/touch/X_pressed.png" id="7_a3pd7"]
+[ext_resource type="Texture2D" uid="uid://c86uw3i501nlu" path="res://resources/images/touch/Y_unpressed.png" id="8_25rhg"]
+[ext_resource type="Texture2D" uid="uid://bysa8ind4wavd" path="res://resources/images/touch/Y_pressed.png" id="9_4l7c8"]
+[ext_resource type="Texture2D" uid="uid://ba1jes5kug5ym" path="res://resources/images/touch/LB_unpressed.png" id="10_25rhg"]
+[ext_resource type="Texture2D" uid="uid://dykgpwy54qt1p" path="res://resources/images/touch/LB_pressed.png" id="11_4l7c8"]
+[ext_resource type="Texture2D" uid="uid://bebmdp8rggx3t" path="res://resources/images/touch/RB_unpressed.png" id="12_2aqb1"]
+[ext_resource type="Texture2D" uid="uid://bgdsvhplbn67y" path="res://resources/images/touch/LT_unpressed.png" id="12_of62m"]
+[ext_resource type="Texture2D" uid="uid://b5k4f8q75ytb2" path="res://resources/images/touch/LT_pressed.png" id="13_iarm7"]
+[ext_resource type="Texture2D" uid="uid://bin4fwvpgv6l5" path="res://resources/images/touch/RB_pressed.png" id="13_of62m"]
+[ext_resource type="Texture2D" uid="uid://dh05vime5mtl" path="res://resources/images/touch/RT_unpressed.png" id="14_iarm7"]
+[ext_resource type="Texture2D" uid="uid://v5ojrqqbs5ej" path="res://resources/images/touch/RT_pressed.png" id="15_pabr1"]
+
+[node name="CapaTactil" type="CanvasLayer"]
+layer = 3
+script = ExtResource("1_e1p3u")
+
+[node name="Contenedor" type="Node2D" parent="."]
+
+[node name="Botones" type="Node2D" parent="Contenedor"]
+
+[node name="A" type="TouchScreenButton" parent="Contenedor/Botones"]
+position = Vector2(1171, 451)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("3_qhuhg")
+texture_pressed = ExtResource("2_usplv")
+
+[node name="B" type="TouchScreenButton" parent="Contenedor/Botones"]
+position = Vector2(1074, 542)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("5_ugv2f")
+texture_pressed = ExtResource("4_ku10b")
+action = "Control_B_Circ"
+
+[node name="X" type="TouchScreenButton" parent="Contenedor/Botones"]
+position = Vector2(976, 450)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("7_a3pd7")
+texture_pressed = ExtResource("6_xlaus")
+action = "Control_X_cuad"
+
+[node name="Y" type="TouchScreenButton" parent="Contenedor/Botones"]
+position = Vector2(1071, 360)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("9_4l7c8")
+texture_pressed = ExtResource("8_25rhg")
+action = "CONTROL_Y_tria"
+
+[node name="Control" type="Node2D" parent="Contenedor"]
+
+[node name="LB" type="TouchScreenButton" parent="Contenedor/Control"]
+position = Vector2(193, 170)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("11_4l7c8")
+texture_pressed = ExtResource("10_25rhg")
+action = "Control_L3"
+
+[node name="LT" type="TouchScreenButton" parent="Contenedor/Control"]
+position = Vector2(193, 41)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("13_iarm7")
+texture_pressed = ExtResource("12_of62m")
+
+[node name="RT" type="TouchScreenButton" parent="Contenedor/Control"]
+position = Vector2(961, 41)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("15_pabr1")
+texture_pressed = ExtResource("14_iarm7")
+action = "Control_RT_R2"
+
+[node name="RB" type="TouchScreenButton" parent="Contenedor/Control"]
+position = Vector2(962, 170)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("13_of62m")
+texture_pressed = ExtResource("12_2aqb1")
+action = "Control_L3"
+
+[node name="Pad" type="Node2D" parent="Contenedor"]
+
+[node name="PadArr" type="TouchScreenButton" parent="Contenedor/Pad"]
+position = Vector2(210, 321)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("3_0q7so")
+texture_pressed = ExtResource("2_vctob")
+passby_press = true
+action = "ui_up"
+
+[node name="PadAbj" type="TouchScreenButton" parent="Contenedor/Pad"]
+position = Vector2(333, 698)
+rotation = 3.14159
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("3_0q7so")
+texture_pressed = ExtResource("2_vctob")
+passby_press = true
+action = "ui_down"
+
+[node name="PadDer" type="TouchScreenButton" parent="Contenedor/Pad"]
+position = Vector2(469, 448)
+rotation = 1.5708
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("3_0q7so")
+texture_pressed = ExtResource("2_vctob")
+passby_press = true
+action = "ui_right"
+
+[node name="PadIzq" type="TouchScreenButton" parent="Contenedor/Pad"]
+position = Vector2(75, 572)
+rotation = -1.5708
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("3_0q7so")
+texture_pressed = ExtResource("2_vctob")
+passby_press = true
+action = "ui_left"
+
+[node name="Triggers" type="Node2D" parent="Contenedor"]
+
+[node name="Start" type="TouchScreenButton" parent="Contenedor/Triggers"]
+position = Vector2(704, 41.0001)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("5_m80n5")
+texture_pressed = ExtResource("4_0ymrh")
+action = "Control_Start"
+
+[node name="Back" type="TouchScreenButton" parent="Contenedor/Triggers"]
+position = Vector2(449, 42.0001)
+scale = Vector2(1.8, 1.8)
+texture_normal = ExtResource("5_x6107")
+texture_pressed = ExtResource("4_hjps7")
+action = "Control_Back"

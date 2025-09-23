@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp1m1k357d67x"
+path="res://.godot/imported/Mundo Tec.mp3-fb164db6a30085a79ef25412ea8b6c36.mp3str"
+
+[deps]
+
+source_file="res://resources/audio/musica/Mundo Tec.mp3"
+dest_files=["res://.godot/imported/Mundo Tec.mp3-fb164db6a30085a79ef25412ea8b6c36.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

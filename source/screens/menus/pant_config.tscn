@@ -1,0 +1,176 @@
+[gd_scene load_steps=6 format=3 uid="uid://be4ajke3n2l0g"]
+
+[ext_resource type="Script" uid="uid://b66phe1ykqyy8" path="res://source/screens/menus/pant_config.gd" id="1_25cpi"]
+[ext_resource type="FontFile" uid="uid://dhfqs3hiwwpc3" path="res://resources/lang/MinecraftRegular-Bmg3.otf" id="1_a6jwc"]
+[ext_resource type="Theme" uid="uid://tanh1kklj0vh" path="res://source/screens/menus/pant_principal_tema.tres" id="3_w4dsj"]
+
+[sub_resource type="Gradient" id="Gradient_wagfi"]
+offsets = PackedFloat32Array(0.0324675, 1)
+colors = PackedColorArray(0.445626, 0.0175171, 0.104678, 1, 0, 0, 0, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 11
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_itqv8"]
+gradient = SubResource("Gradient_wagfi")
+
+[node name="PantConfig" type="Node2D"]
+script = ExtResource("1_25cpi")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Fondo" type="Sprite2D" parent="Panel"]
+position = Vector2(640, 359.875)
+scale = Vector2(5, 720.25)
+texture = SubResource("GradientTexture1D_itqv8")
+
+[node name="HBox" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.382031
+anchor_top = 0.215278
+anchor_right = 0.65
+anchor_bottom = 0.725
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+metadata/_edit_use_anchors_ = true
+
+[node name="Vlabels" type="VBoxContainer" parent="Panel/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="lbl_idioma" type="Label" parent="Panel/HBox/Vlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "lbl_idioma"
+horizontal_alignment = 1
+
+[node name="lbl_master" type="Label" parent="Panel/HBox/Vlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "lbl_master"
+horizontal_alignment = 1
+
+[node name="lbl_musica" type="Label" parent="Panel/HBox/Vlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "lbl_musica"
+horizontal_alignment = 1
+
+[node name="lbl_sfx" type="Label" parent="Panel/HBox/Vlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "lbl_sfx"
+horizontal_alignment = 1
+
+[node name="lbl_voz" type="Label" parent="Panel/HBox/Vlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "lbl_voz"
+horizontal_alignment = 1
+
+[node name="lbl_controles" type="Label" parent="Panel/HBox/Vlabels"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "lbl_controles"
+horizontal_alignment = 1
+
+[node name="VButtons" type="VBoxContainer" parent="Panel/HBox"]
+layout_mode = 2
+theme_override_constants/separation = 56
+
+[node name="btn_idioma" type="Button" parent="Panel/HBox/VButtons"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../../../HBoxBtn/btn_guardar")
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "btn_idioma"
+
+[node name="slider_master" type="HSlider" parent="Panel/HBox/VButtons"]
+layout_mode = 2
+theme = ExtResource("3_w4dsj")
+max_value = 1.0
+step = 0.1
+
+[node name="slider_musica" type="HSlider" parent="Panel/HBox/VButtons"]
+layout_mode = 2
+theme = ExtResource("3_w4dsj")
+max_value = 1.0
+step = 0.1
+
+[node name="slider_sfx" type="HSlider" parent="Panel/HBox/VButtons"]
+layout_mode = 2
+theme = ExtResource("3_w4dsj")
+max_value = 1.0
+step = 0.1
+
+[node name="slider_voz" type="HSlider" parent="Panel/HBox/VButtons"]
+layout_mode = 2
+theme = ExtResource("3_w4dsj")
+max_value = 1.0
+step = 0.1
+
+[node name="btn_controles" type="Button" parent="Panel/HBox/VButtons"]
+layout_mode = 2
+focus_neighbor_right = NodePath("../../../HBoxBtn/btn_guardar")
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "btn_controlesAct"
+
+[node name="HBoxBtn" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -309.0
+offset_top = -110.0
+offset_right = 309.0
+offset_bottom = -77.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 60
+
+[node name="btn_pant_principal" type="Button" parent="Panel/HBoxBtn"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../../HBox/VButtons/slider_voz")
+focus_neighbor_right = NodePath("../btn_guardar")
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "btn_pant_principal"
+
+[node name="btn_guardar" type="Button" parent="Panel/HBoxBtn"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../btn_pant_principal")
+focus_neighbor_top = NodePath("../../HBox/VButtons/slider_voz")
+focus_neighbor_right = NodePath("../btn_eliminarPart")
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "btn_guardar"
+
+[node name="btn_eliminarPart" type="Button" parent="Panel/HBoxBtn"]
+layout_mode = 2
+focus_neighbor_left = NodePath("../btn_guardar")
+focus_neighbor_top = NodePath("../../HBox/VButtons/slider_voz")
+theme_override_fonts/font = ExtResource("1_a6jwc")
+theme_override_font_sizes/font_size = 24
+text = "btn_eliminar_part"
+
+[connection signal="pressed" from="Panel/HBox/VButtons/btn_idioma" to="." method="_on_btn_idioma_pressed"]
+[connection signal="value_changed" from="Panel/HBox/VButtons/slider_master" to="." method="_on_slider_master_value_changed"]
+[connection signal="value_changed" from="Panel/HBox/VButtons/slider_musica" to="." method="_on_slider_musica_value_changed"]
+[connection signal="value_changed" from="Panel/HBox/VButtons/slider_sfx" to="." method="_on_slider_sfx_value_changed"]
+[connection signal="value_changed" from="Panel/HBox/VButtons/slider_voz" to="." method="_on_slider_voz_value_changed"]
+[connection signal="pressed" from="Panel/HBox/VButtons/btn_controles" to="." method="_on_btn_controles_pressed"]
+[connection signal="pressed" from="Panel/HBoxBtn/btn_pant_principal" to="." method="_on_btn_pant_principal_pressed"]
+[connection signal="pressed" from="Panel/HBoxBtn/btn_guardar" to="." method="_on_btn_guardar_idioma_pressed"]
+[connection signal="pressed" from="Panel/HBoxBtn/btn_eliminarPart" to="." method="_on_btn_eliminar_part_pressed"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfsrljp1wrpa3"]
+
+[ext_resource type="Script" uid="uid://cfkw0qjhmxkxm" path="res://source/screens/juego/HUD/game_over.gd" id="1_8ux7w"]
+[ext_resource type="Theme" uid="uid://tanh1kklj0vh" path="res://source/screens/menus/pant_principal_tema.tres" id="1_r3bi5"]
+[ext_resource type="Texture2D" uid="uid://c0kx42kolumib" path="res://resources/images/wiiButtonContinuar_es.png" id="2_2ul5m"]
+[ext_resource type="Texture2D" uid="uid://ddlgv6ag1tuq6" path="res://resources/images/wiiButtonMenu_es.png" id="3_3yw4x"]
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_8ux7w")
+
+[node name="Fondo" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.282353, 0, 0, 0.45098)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -195.0
+offset_top = -239.5
+offset_right = 195.0
+offset_bottom = -170.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_r3bi5")
+theme_override_font_sizes/font_size = 50
+text = "lbl_gameover"
+
+[node name="Continuar" type="Sprite2D" parent="."]
+position = Vector2(342, 434)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_2ul5m")
+
+[node name="btnContinuar" type="Button" parent="Continuar"]
+offset_left = -93.0
+offset_top = -40.0
+offset_right = 93.0
+offset_bottom = 41.0
+focus_neighbor_right = NodePath("../../Menu/btnMenu")
+theme_type_variation = &"FlatButton"
+
+[node name="Menu" type="Sprite2D" parent="."]
+position = Vector2(938, 437)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_3yw4x")
+
+[node name="btnMenu" type="Button" parent="Menu"]
+offset_left = -93.0
+offset_top = -39.0
+offset_right = 92.0
+offset_bottom = 40.0
+focus_neighbor_left = NodePath("../../Continuar/btnContinuar")
+theme_type_variation = &"FlatButton"
+
+[connection signal="pressed" from="Continuar/btnContinuar" to="." method="_on_btn_continuar_pressed"]
+[connection signal="pressed" from="Menu/btnMenu" to="." method="_on_btn_menu_pressed"]

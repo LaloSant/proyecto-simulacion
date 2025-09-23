@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbu2x8nmrqsdr"]
+
+[ext_resource type="FontFile" uid="uid://bqc8jwwk78iqu" path="res://resources/lang/MinecraftBoldItalic-1y1e.otf" id="1_fjjae"]
+[ext_resource type="Script" uid="uid://18jthqen2s5p" path="res://source/componentes/btn_guardar_partida.gd" id="2_owasj"]
+
+[node name="btn_GuardarPartida" type="Button"]
+offset_right = 338.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("1_fjjae")
+theme_override_font_sizes/font_size = 28
+text = "btn_GuardarPartida"
+script = ExtResource("2_owasj")

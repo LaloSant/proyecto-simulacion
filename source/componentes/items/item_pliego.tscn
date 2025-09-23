@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3pk4f2vhkgfs"]
+
+[ext_resource type="Script" uid="uid://h6wc135gxti8" path="res://source/componentes/items/item_pliego.gd" id="1_p66s7"]
+[ext_resource type="Texture2D" uid="uid://cela36opj1m23" path="res://source/componentes/items/document.png" id="1_xy7ql"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ed2q0"]
+
+[node name="ItemPliego" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_p66s7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_xy7ql")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ed2q0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://c3ey0bg0r1bb7"]
+
+[ext_resource type="Texture2D" uid="uid://6f767xb0f2fi" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0456.png" id="1_dan23"]
+[ext_resource type="Texture2D" uid="uid://825jq445pleq" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0457.png" id="2_odece"]
+[ext_resource type="Texture2D" uid="uid://bgopyynr857xx" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0458.png" id="3_pn674"]
+[ext_resource type="Texture2D" uid="uid://bvap3r4siilv6" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0455.png" id="4_pf4ie"]
+[ext_resource type="Texture2D" uid="uid://tw7ltynseoib" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0429.png" id="5_5f767"]
+[ext_resource type="Texture2D" uid="uid://befo7ifb6v45j" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0430.png" id="6_javml"]
+[ext_resource type="Texture2D" uid="uid://c3n13jmiwrc3o" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0431.png" id="7_4aqmc"]
+[ext_resource type="Texture2D" uid="uid://jw0b5f5j6edx" path="res://source/componentes/personajes/enemigos/Ghost girl/tile_0428.png" id="8_gpiwt"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dan23")
+}],
+"loop": true,
+"name": &"caminar_abj",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_odece")
+}],
+"loop": true,
+"name": &"caminar_arr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_pn674")
+}],
+"loop": true,
+"name": &"caminar_der",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_pf4ie")
+}],
+"loop": true,
+"name": &"caminar_izq",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5f767")
+}],
+"loop": true,
+"name": &"idle_abj",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_javml")
+}],
+"loop": true,
+"name": &"idle_arr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_4aqmc")
+}],
+"loop": true,
+"name": &"idle_der",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_gpiwt")
+}],
+"loop": true,
+"name": &"idle_izq",
+"speed": 5.0
+}]

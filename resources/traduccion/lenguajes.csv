@@ -1,0 +1,35 @@
+id,es,en,fr
+btn_iniciar,Nueva partida,New  Game,Nouveau jeu
+btn_continuar,Continuar partida,Continue ,Continuer le jeu
+btn_salir,Salir del Juego,Exit Game,Jeu de sortie
+btn_config,Configuracion,Settings,Paramètres
+btn_pant_principal,Pantalla principal,Main menu,Menu principal
+btn_idioma,Cambiar Idioma,Change Language,Changer de langue
+btn_eliminar_part,Eliminar guardado,Erase save,Effacer la sauvegarde
+btn_guardar,Guardar,Save,Saveguarder
+btn_AMenuPrin,Ir a menu,Go to menu,Aller au menu
+btn_creditos,Creditos,Credits,Crédits
+btn_start,Empezar,Start,Commencer
+btn_controlesAct,Activos,Actives,Activees
+btn_controlesDes,Desactivados,Deactivated,Non activees
+btn_A_Pant_Intro,Saltar,Skip,Sautiller
+lbl_titulo,Cinco noches en Hugo,Five Nights at Hugo's,Cinq nuits chez Hugo
+lbl_idioma,Espanol,English,Français
+lbl_Salon,Salon,Classroom,Classe
+lbl_P1,Piso 1,Floor 1,Étage 1
+lbl_Pb,Planta baja,Ground floor,Rez-de-chaussée
+lbl_dia1,Dia uno,Day one,Jour un
+lbl_dia2,Dia dos,Day two,Jour deux
+lbl_dia3,Dia tres,Day three,Jour trois
+lbl_dia4,Dia cuatro,Day four,Jour quatre
+lbl_master,Audio: maestro,Audio: Master,Audio: Master
+lbl_musica,Audio: Musica,Audio: Music,Audio: Musique
+lbl_sfx,Audio: SFX,Audio: SFX,Audio: SFX
+lbl_voz,Audio: Voz,Audio: voice,Audio: voix
+lbl_gameover,Fin de la partida,Game Over,Jeu Terminé
+lbl_controles,Controles tactiles,Tactile controls,Controles tactiles
+lblMisiones,Misiones,Mission,Mission
+lblMisionPaginas,Paginas del diario (Amb.),Pages of diary (Amb),Pages du journal (Amb)
+lblMisionPliego, Pliego petitorio (Cristal),Petition document (Crystal),Document de pétition (Verre)
+lblMisionNaranjas,Entregar narajnas (Meca),Deliver oranges (Meca),Livrer des oranges (Meca)
+,,,

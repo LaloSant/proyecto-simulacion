@@ -1,0 +1,174 @@
+[gd_scene load_steps=10 format=3 uid="uid://d0a4ucxe160yd"]
+
+[ext_resource type="Script" uid="uid://bsljbid08urdh" path="res://source/screens/juego/HUD/hud.gd" id="1_s75c2"]
+[ext_resource type="FontFile" uid="uid://bqc8jwwk78iqu" path="res://resources/lang/MinecraftBoldItalic-1y1e.otf" id="2_8tycl"]
+[ext_resource type="Theme" uid="uid://tanh1kklj0vh" path="res://source/screens/menus/pant_principal_tema.tres" id="4_gxufb"]
+[ext_resource type="SpriteFrames" uid="uid://isubefltarb4" path="res://source/screens/juego/HUD/salud_bar.tres" id="5_atmrw"]
+[ext_resource type="Texture2D" uid="uid://dkuatk4q1afp0" path="res://resources/images/Tick.png" id="5_dnx0k"]
+[ext_resource type="Texture2D" uid="uid://3nr5v0uf3vqg" path="res://source/componentes/items/Torta.png" id="6_dnx0k"]
+
+[sub_resource type="Animation" id="Animation_dnx0k"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_atmrw"]
+resource_name = "danio"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(326, 669), Vector2(326, 650), Vector2(326, 669)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0335345, 0.1),
+"transitions": PackedFloat32Array(1, 0.124167, 1),
+"update": 0,
+"values": [0.0, 0.10472, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fse68"]
+_data = {
+&"RESET": SubResource("Animation_dnx0k"),
+&"danio": SubResource("Animation_atmrw")
+}
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_s75c2")
+metadata/_edit_vertical_guides_ = [71.0]
+
+[node name="lblInfo" type="Label" parent="."]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -31.5
+offset_top = 30.0
+offset_right = 31.5
+offset_bottom = 53.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_8tycl")
+theme_override_font_sizes/font_size = 30
+text = "lblInfo"
+
+[node name="Salud" type="AnimatedSprite2D" parent="."]
+position = Vector2(326, 669)
+scale = Vector2(4.68018, 4.68018)
+sprite_frames = ExtResource("5_atmrw")
+animation = &"salud"
+frame = 10
+
+[node name="ANPSalud" type="AnimationPlayer" parent="Salud"]
+libraries = {
+&"": SubResource("AnimationLibrary_fse68")
+}
+
+[node name="PanelMisiones" type="Panel" parent="."]
+modulate = Color(0, 1, 0, 1)
+offset_left = 574.0
+offset_top = -413.0
+offset_right = 1280.0
+offset_bottom = -2.0
+
+[node name="lblMisiones" type="Label" parent="PanelMisiones"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.5
+offset_top = 16.0
+offset_right = 94.5
+offset_bottom = 46.0
+grow_horizontal = 2
+theme = ExtResource("4_gxufb")
+theme_override_font_sizes/font_size = 35
+text = "lblMisiones"
+
+[node name="lblMisionPliego" type="Label" parent="PanelMisiones"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -135.0
+offset_right = 268.0
+offset_bottom = -105.0
+grow_vertical = 2
+theme = ExtResource("4_gxufb")
+theme_override_font_sizes/font_size = 30
+text = "lblMisionPliego"
+
+[node name="TickPliego" type="Sprite2D" parent="PanelMisiones"]
+position = Vector2(74, 130)
+scale = Vector2(0.0494898, 0.0494898)
+texture = ExtResource("5_dnx0k")
+
+[node name="lblMisionPaginas" type="Label" parent="PanelMisiones"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -23.0
+offset_right = 298.0
+offset_bottom = 7.0
+grow_vertical = 2
+theme = ExtResource("4_gxufb")
+theme_override_font_sizes/font_size = 30
+text = "lblMisionPaginas"
+
+[node name="lblNumPaginas" type="Label" parent="PanelMisiones"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 196.0
+offset_top = 24.5
+offset_right = 478.0
+offset_bottom = 54.5
+grow_vertical = 2
+theme = ExtResource("4_gxufb")
+theme_override_font_sizes/font_size = 30
+text = "X / 8"
+
+[node name="TickPaginas" type="Sprite2D" parent="PanelMisiones"]
+visible = false
+position = Vector2(74, 242)
+scale = Vector2(0.0494898, 0.0494898)
+texture = ExtResource("5_dnx0k")
+
+[node name="lblMisionNaranjas" type="Label" parent="PanelMisiones"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 81.0
+offset_right = 331.0
+offset_bottom = 111.0
+grow_vertical = 2
+theme = ExtResource("4_gxufb")
+theme_override_font_sizes/font_size = 30
+text = "lblMisionNaranjas"
+
+[node name="TickNaranjas" type="Sprite2D" parent="PanelMisiones"]
+position = Vector2(74, 346)
+scale = Vector2(0.0494898, 0.0494898)
+texture = ExtResource("5_dnx0k")
+
+[node name="Torta" type="Sprite2D" parent="."]
+modulate = Color(0.973535, 0.973535, 0.973535, 1)
+position = Vector2(101.5, 588.5)
+scale = Vector2(5.9375, 5.6875)
+texture = ExtResource("6_dnx0k")

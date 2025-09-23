@@ -1,0 +1,302 @@
+[gd_resource type="SpriteFrames" load_steps=35 format=3 uid="uid://cbeep7olcpvdr"]
+
+[ext_resource type="Texture2D" uid="uid://d3hhq6dw62oab" path="res://source/componentes/personajes/yael/yael_frente.png" id="1_4ttwi"]
+[ext_resource type="Texture2D" uid="uid://cls1vckspqnj3" path="res://source/componentes/personajes/yael/yael_frentew1.png" id="2_v4r4d"]
+[ext_resource type="Texture2D" uid="uid://bki5ed03sam4l" path="res://source/componentes/personajes/yael/yael_frentew2.png" id="3_2en7f"]
+[ext_resource type="Texture2D" uid="uid://ddantqhy4si70" path="res://source/componentes/personajes/yael/yael_back.png" id="4_bx6wa"]
+[ext_resource type="Texture2D" uid="uid://d0bvkd5fjjxfg" path="res://source/componentes/personajes/yael/yael_back1.png" id="5_5il1r"]
+[ext_resource type="Texture2D" uid="uid://bw224p1fbf7ku" path="res://source/componentes/personajes/yael/yael_back2.png" id="6_54ww7"]
+[ext_resource type="Texture2D" uid="uid://bk3j0i4sgu24u" path="res://source/componentes/personajes/yael/yael_back3.png" id="7_yedjk"]
+[ext_resource type="Texture2D" uid="uid://kq0o6mt5j4ma" path="res://source/componentes/personajes/yael/yael_back4.png" id="8_4j6qw"]
+[ext_resource type="Texture2D" uid="uid://dfjtsrwcy8qpt" path="res://source/componentes/personajes/yael/yael_right.png" id="9_nbhhv"]
+[ext_resource type="Texture2D" uid="uid://b1b225rxbyt1k" path="res://source/componentes/personajes/yael/yael_rightw1.png" id="10_buqpe"]
+[ext_resource type="Texture2D" uid="uid://bvxaha4nxy4ry" path="res://source/componentes/personajes/yael/yael_rightw2.png" id="11_sdhp8"]
+[ext_resource type="Texture2D" uid="uid://d3bg24as5t6tq" path="res://source/componentes/personajes/yael/yael_izq.png" id="12_3773h"]
+[ext_resource type="Texture2D" uid="uid://dqoyprkjkqww0" path="res://source/componentes/personajes/yael/yael_leftw1.png" id="13_s73s2"]
+[ext_resource type="Texture2D" uid="uid://btbvbag2lqu16" path="res://source/componentes/personajes/yael/yael_leftw2.png" id="14_3ayd8"]
+[ext_resource type="Texture2D" uid="uid://80txispv7who" path="res://source/componentes/personajes/yael/back_punch1.png" id="15_eo1f6"]
+[ext_resource type="Texture2D" uid="uid://8c4rxv6pihlb" path="res://source/componentes/personajes/yael/yael_death1.png" id="15_tk3hf"]
+[ext_resource type="Texture2D" uid="uid://mrwjc2o4cx13" path="res://source/componentes/personajes/yael/front_punch1.png" id="15_wbc8u"]
+[ext_resource type="Texture2D" uid="uid://cp1c7qifxdaqi" path="res://source/componentes/personajes/yael/back_punch2.png" id="16_3kg0l"]
+[ext_resource type="Texture2D" uid="uid://bht6kaa1vvy7w" path="res://source/componentes/personajes/yael/front_punch2.png" id="16_t3jaf"]
+[ext_resource type="Texture2D" uid="uid://dbm563cnaw781" path="res://source/componentes/personajes/yael/yael_death2.png" id="16_w3vvl"]
+[ext_resource type="Texture2D" uid="uid://bd8xcdvrmf87g" path="res://source/componentes/personajes/yael/front_punch3.png" id="17_i6wh5"]
+[ext_resource type="Texture2D" uid="uid://57bnisjrfkad" path="res://source/componentes/personajes/yael/yael_death3.png" id="17_lcjm7"]
+[ext_resource type="Texture2D" uid="uid://s0f5646hv31y" path="res://source/componentes/personajes/yael/yael_death4.png" id="18_lit46"]
+[ext_resource type="Texture2D" uid="uid://djd2nbihtq8qb" path="res://source/componentes/personajes/yael/yael_death5.png" id="19_shfnu"]
+[ext_resource type="Texture2D" uid="uid://hrw8fwek42cq" path="res://source/componentes/personajes/yael/right_punch1.png" id="20_32mmq"]
+[ext_resource type="Texture2D" uid="uid://dwr83bhit12af" path="res://source/componentes/personajes/yael/left_punch1.png" id="20_csfgu"]
+[ext_resource type="Texture2D" uid="uid://cpuo5eqvoqosi" path="res://source/componentes/personajes/yael/right_punch2.png" id="21_jjolt"]
+[ext_resource type="Texture2D" uid="uid://rq0kqc626x3t" path="res://source/componentes/personajes/yael/left_punch2.png" id="21_rrpf4"]
+[ext_resource type="Texture2D" uid="uid://cl8kn2kb4vjs4" path="res://source/componentes/personajes/yael/right_punch3.png" id="22_4b1vq"]
+[ext_resource type="Texture2D" uid="uid://b007jig5wmq77" path="res://source/componentes/personajes/yael/left_punch3.png" id="22_mbk4b"]
+[ext_resource type="Texture2D" uid="uid://co5gs86g3pmtj" path="res://source/componentes/personajes/yael/left_punch4.png" id="23_4jun6"]
+[ext_resource type="Texture2D" uid="uid://c2l1yropjt6bo" path="res://source/componentes/personajes/yael/right_punch4.png" id="23_f6vvm"]
+[ext_resource type="Texture2D" uid="uid://jqymcaakntev" path="res://source/componentes/personajes/yael/right_punch5.png" id="24_bhjuq"]
+[ext_resource type="Texture2D" uid="uid://bcxvbfh37mhyc" path="res://source/componentes/personajes/yael/left_punch5.png" id="24_tkxmj"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4ttwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v4r4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_4ttwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2en7f")
+}],
+"loop": true,
+"name": &"caminar_abj",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bx6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5il1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bx6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_54ww7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bx6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yedjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_bx6wa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4j6qw")
+}],
+"loop": true,
+"name": &"caminar_arr",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_nbhhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_buqpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_nbhhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sdhp8")
+}],
+"loop": true,
+"name": &"caminar_der",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_3773h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_s73s2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3773h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_3ayd8")
+}],
+"loop": true,
+"name": &"caminar_izq",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4ttwi")
+}],
+"loop": true,
+"name": &"idle_abj",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bx6wa")
+}],
+"loop": true,
+"name": &"idle_arr",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_nbhhv")
+}],
+"loop": true,
+"name": &"idle_der",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_3773h")
+}],
+"loop": true,
+"name": &"idle_izq",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 7.0,
+"texture": ExtResource("15_tk3hf")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_w3vvl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_lcjm7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_lit46")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_w3vvl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_lcjm7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_lit46")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_w3vvl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_lcjm7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_lit46")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_w3vvl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_lcjm7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_lit46")
+}, {
+"duration": 0.5,
+"texture": ExtResource("16_w3vvl")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_lcjm7")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_lit46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_shfnu")
+}],
+"loop": false,
+"name": &"muerte",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_wbc8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_t3jaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i6wh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i6wh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i6wh5")
+}],
+"loop": false,
+"name": &"punch_abj",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_eo1f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3kg0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3kg0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_3kg0l")
+}],
+"loop": false,
+"name": &"punch_arr",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_32mmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jjolt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4b1vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_f6vvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_bhjuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_f6vvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4b1vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_jjolt")
+}],
+"loop": false,
+"name": &"punch_der",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_csfgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rrpf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mbk4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4jun6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_tkxmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4jun6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_mbk4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rrpf4")
+}],
+"loop": false,
+"name": &"punch_izq",
+"speed": 10.0
+}]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://1dlgsg6bim1q"]
+
+[ext_resource type="Script" uid="uid://dasvmsaq41ibe" path="res://source/screens/menus/pant_video_intro.gd" id="1_14l2k"]
+[ext_resource type="VideoStream" uid="uid://bvhhwlmsgp6a1" path="res://resources/videos/Video Intro.ogv" id="1_pef3p"]
+[ext_resource type="FontFile" uid="uid://bqc8jwwk78iqu" path="res://resources/lang/MinecraftBoldItalic-1y1e.otf" id="3_tuw8e"]
+
+[node name="PantVideoIntro" type="Node2D"]
+script = ExtResource("1_14l2k")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1088.0
+scale = Vector2(0.667, 0.667)
+stream = ExtResource("1_pef3p")
+autoplay = true
+
+[node name="btn_A_Pant_Intro" type="Button" parent="."]
+offset_left = 873.0
+offset_top = 638.0
+offset_right = 1135.0
+offset_bottom = 671.0
+theme_override_fonts/font = ExtResource("3_tuw8e")
+theme_override_font_sizes/font_size = 24
+text = "btn_A_Pant_Intro"
+
+[connection signal="finished" from="Panel/VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="btn_A_Pant_Intro" to="." method="_on_btn_a_pant_intro_pressed"]

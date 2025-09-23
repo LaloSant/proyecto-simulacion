@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8hbcu3tjoig"]
+
+[ext_resource type="Script" uid="uid://gibyvu32qjwp" path="res://source/screens/juego/HUD/dialog_window.gd" id="1_0udlt"]
+[ext_resource type="Theme" uid="uid://tanh1kklj0vh" path="res://source/screens/menus/pant_principal_tema.tres" id="1_lf66c"]
+[ext_resource type="AudioStream" uid="uid://dtpchmg4j0tvf" path="res://resources/audio/item.mp3" id="2_odnht"]
+
+[node name="DialogWindow" type="CanvasLayer"]
+script = ExtResource("1_0udlt")
+texto = "Placeholder"
+sound = ExtResource("2_odnht")
+tiempo = 4
+
+[node name="PnlTexto" type="Panel" parent="."]
+offset_top = 528.0
+offset_right = 1280.0
+offset_bottom = 628.0
+
+[node name="lbl_texto" type="Label" parent="PnlTexto"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -156.0
+offset_right = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lf66c")
+theme_override_font_sizes/font_size = 40
+text = "lbl_textoPnl1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer1" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="ASP" type="AudioStreamPlayer" parent="."]
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[connection signal="timeout" from="Timer1" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

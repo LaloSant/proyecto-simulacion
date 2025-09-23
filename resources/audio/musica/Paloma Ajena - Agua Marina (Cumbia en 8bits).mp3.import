@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c17fi1dll7hq8"
+path="res://.godot/imported/Paloma Ajena - Agua Marina (Cumbia en 8bits).mp3-38fb0e0d1071ef63b4f80181184c3468.mp3str"
+
+[deps]
+
+source_file="res://resources/audio/musica/Paloma Ajena - Agua Marina (Cumbia en 8bits).mp3"
+dest_files=["res://.godot/imported/Paloma Ajena - Agua Marina (Cumbia en 8bits).mp3-38fb0e0d1071ef63b4f80181184c3468.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

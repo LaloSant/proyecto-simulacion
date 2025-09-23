@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bna2yasfy1opo"]
+
+[ext_resource type="Script" uid="uid://cebu4ypl0kfwy" path="res://source/componentes/tps/transportador.gd" id="1_25a64"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_geq71"]
+
+[node name="Tp" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_25a64")
+
+[node name="Zona" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_geq71")
+
+[node name="CooldownPersonaje" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

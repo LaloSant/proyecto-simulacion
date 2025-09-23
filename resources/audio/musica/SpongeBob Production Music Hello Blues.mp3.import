@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://diqtm5bnb3xrg"
+path="res://.godot/imported/SpongeBob Production Music Hello Blues.mp3-8a386aab67a8a1f2e87fc11364b8527f.mp3str"
+
+[deps]
+
+source_file="res://resources/audio/musica/SpongeBob Production Music Hello Blues.mp3"
+dest_files=["res://.godot/imported/SpongeBob Production Music Hello Blues.mp3-8a386aab67a8a1f2e87fc11364b8527f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

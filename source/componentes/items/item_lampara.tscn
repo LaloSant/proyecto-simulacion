@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://lmhgy8eugrgv"]
+
+[ext_resource type="Script" uid="uid://suah4lnck26u" path="res://source/componentes/items/item_lampara.gd" id="1_fupxj"]
+[ext_resource type="Texture2D" uid="uid://bebir88x6lwt" path="res://source/componentes/items/item_lampara.png" id="2_fupxj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p3jm3"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hbhr5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fupxj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_wciv2"]
+offsets = PackedFloat32Array(0, 0.656051)
+colors = PackedColorArray(0.446777, 0.446777, 0.446777, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fupxj"]
+gradient = SubResource("Gradient_wciv2")
+fill = 1
+fill_from = Vector2(0.493213, 0.502262)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_8mohx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_fupxj"]
+resource_name = "titilar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.333333, 0.433333, 0.666667, 0.8, 0.96),
+"transitions": PackedFloat32Array(10.9283, 1, 1, 3.4822, 1, 1, 10.9283),
+"update": 0,
+"values": [0.7, 1.0, 0.9, 1.2, 0.8, 0.5, 0.7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p3jm3"]
+_data = {
+&"RESET": SubResource("Animation_8mohx"),
+&"titilar": SubResource("Animation_fupxj")
+}
+
+[node name="item_lampara" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_fupxj")
+
+[node name="HB" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_p3jm3")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hbhr5")
+
+[node name="Luz" type="PointLight2D" parent="."]
+scale = Vector2(6.30664, 6.30664)
+color = Color(1, 0.956863, 0.772549, 1)
+energy = 0.4
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_fupxj")
+
+[node name="ANPLuz" type="AnimationPlayer" parent="Luz"]
+libraries = {
+&"": SubResource("AnimationLibrary_p3jm3")
+}
+autoplay = "titilar"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfphplmv1hblj"]
+
+[ext_resource type="Script" uid="uid://smlab1ljk0ri" path="res://source/singleton/transiciones/transicion.gd" id="1_61r6y"]
+[ext_resource type="Texture2D" uid="uid://bybrad6k8kuru" path="res://resources/images/BlueCircle.png" id="2_sb3ea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hiu41"]
+
+[node name="Transicion" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_61r6y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hiu41")
+
+[node name="BlueCircle" type="Sprite2D" parent="."]
+position = Vector2(-9.53674e-07, 4.17233e-07)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_sb3ea")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

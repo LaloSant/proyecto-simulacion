@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=3 uid="uid://bddno62kg4il7"]
+
+[ext_resource type="Script" uid="uid://bul7rvf1h3i0u" path="res://source/componentes/personajes/enemigos/enemigo_base.gd" id="1_f2cju"]
+[ext_resource type="AudioStream" uid="uid://bbukpr4afgaec" path="res://resources/audio/zombie.wav" id="1_igk5n"]
+[ext_resource type="SpriteFrames" uid="uid://dadddakkfagni" path="res://source/componentes/personajes/enemigos/police/policeSprites.tres" id="3_f2cju"]
+[ext_resource type="PackedScene" uid="uid://oyub6yqxy23a" path="res://source/componentes/cajas/hurt_box.tscn" id="4_nryi5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2cju"]
+size = Vector2(13, 14)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f2cju"]
+polygon = PackedVector2Array(-3, -3, 3, -3, 3, 8, -3, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_igk5n"]
+size = Vector2(10.75, 11.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nryi5"]
+size = Vector2(21, 23)
+
+[sub_resource type="Animation" id="Animation_o1q57"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_nryi5"]
+resource_name = "hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7nqon"]
+_data = {
+&"RESET": SubResource("Animation_o1q57"),
+&"hurt": SubResource("Animation_nryi5")
+}
+
+[node name="Enemigo Base" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
+script = ExtResource("1_f2cju")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_igk5n")
+volume_db = -6.0
+autoplay = true
+max_distance = 300.0
+bus = &"SFX"
+
+[node name="HB(disabled)" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_f2cju")
+disabled = true
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("3_f2cju")
+animation = &"muerto"
+
+[node name="Sombra" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_f2cju")
+
+[node name="AreaDanio" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 6
+
+[node name="HB2" type="CollisionShape2D" parent="AreaDanio"]
+shape = SubResource("RectangleShape2D_igk5n")
+
+[node name="HurtBox" parent="." instance=ExtResource("4_nryi5")]
+collision_layer = 128
+collision_mask = 16
+
+[node name="HurtBoxShape" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("RectangleShape2D_nryi5")
+
+[node name="ANPEnemigo" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7nqon")
+}
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[connection signal="body_entered" from="AreaDanio" to="." method="_on_area_danio_body_entered"]
+[connection signal="damage_received" from="HurtBox" to="." method="_on_hurt_box_damage_received"]

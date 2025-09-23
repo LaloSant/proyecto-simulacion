@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=3 uid="uid://36fc6air06j6"]
+
+[ext_resource type="FontFile" uid="uid://bqc8jwwk78iqu" path="res://resources/lang/MinecraftBoldItalic-1y1e.otf" id="1_2hftb"]
+[ext_resource type="Script" uid="uid://b31c2cepenln8" path="res://source/screens/menus/pant_intro.gd" id="1_3jl3o"]
+[ext_resource type="PackedScene" uid="uid://rerxv8lts2mu" path="res://source/componentes/btn_a_menu_prin.tscn" id="2_ij8cx"]
+[ext_resource type="AudioStream" uid="uid://8qlkafu1awr8" path="res://resources/audio/musica/Opening.mp3" id="4_5wqp8"]
+
+[sub_resource type="Gradient" id="Gradient_mhdur"]
+offsets = PackedFloat32Array(0.149351, 0.915584)
+colors = PackedColorArray(0.6, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_njgsu"]
+gradient = SubResource("Gradient_mhdur")
+width = 1280
+height = 720
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 1)
+
+[sub_resource type="Animation" id="Animation_wfc18"]
+resource_name = "CircleOut"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Gradient:texture:fill_to")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1.02213, 1, 0.999999),
+"update": 0,
+"values": [Vector2(0.5, 1), Vector2(0.5, 0.8), Vector2(0.5, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_iwe7g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel/Gradient:texture:fill_to")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.5, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_habs0"]
+_data = {
+&"CircleOut": SubResource("Animation_wfc18"),
+&"RESET": SubResource("Animation_iwe7g")
+}
+
+[node name="PantIntro" type="Node2D"]
+script = ExtResource("1_3jl3o")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Gradient" type="Sprite2D" parent="Panel"]
+position = Vector2(640, 360)
+texture = SubResource("GradientTexture2D_njgsu")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -212.0
+offset_top = -72.0
+offset_right = 212.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_2hftb")
+theme_override_font_sizes/font_size = 80
+text = "lbl_titulo"
+
+[node name="btn_AMenuPrin" parent="Panel" instance=ExtResource("2_ij8cx")]
+layout_mode = 1
+anchors_preset = 8
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -90.75
+offset_top = 34.0
+offset_right = 90.75
+offset_bottom = 94.0
+grow_vertical = 2
+text = "btn_start"
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+wait_time = 45.0
+one_shot = true
+autostart = true
+
+[node name="ANPCircle" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_habs0")
+}
+autoplay = "CircleOut"
+playback_auto_capture_transition_type = 5
+
+[node name="Soundtrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_5wqp8")
+volume_db = 15.0
+autoplay = true
+bus = &"Musica"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
