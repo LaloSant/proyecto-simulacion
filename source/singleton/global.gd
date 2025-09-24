@@ -21,12 +21,15 @@ enum MarkerPosicion{mk_EdificioAmbSalon, mk_EdificioAmbEntrada, mk_EdificioAmbFu
 @onready var controles_tactiles:bool = OS.get_name() == 'Android'
 
 #Seccion personaje
+var jugador:Personaje_2
+var pers_default_name #
 var pers_default_speed:int
 var pers_factorSneak:float 
 var pers_factorRun:float 
+var pers_salud:int
+
 var pers_nombre:String
 var enem_tipo:String
-var pers_salud:int
 
 #Seccion partida
 var naranjas:bool
