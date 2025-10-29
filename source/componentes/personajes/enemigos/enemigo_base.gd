@@ -55,7 +55,7 @@ func actualizarPos(ruta:PathFollow2D, delta:float):
 	$Sprite.play(anim)
 	currentAnim = anim
 	posicionAnt = position
-	
+
 func actualizarPosChase(_delta:float):
 	if muerto:
 		return

@@ -210,22 +210,18 @@ tile_set = ExtResource("3_or3ot")
 
 [node name="NPCs" type="Node" parent="."]
 
-[node name="Profesor" parent="NPCs" node_paths=PackedStringArray("ruta_follow") instance=ExtResource("5_04pcm")]
-position = Vector2(-36, 0)
-ruta_follow = NodePath("../Rutas/Ruta1/RutaFollow")
+[node name="Profesor" parent="NPCs" instance=ExtResource("5_04pcm")]
+position = Vector2(-35, -1)
 
-[node name="Rutas" type="Node" parent="NPCs"]
-
-[node name="Ruta1" type="Path2D" parent="NPCs/Rutas"]
-position = Vector2(-35, 0)
+[node name="RutaProf" type="Path2D" parent="NPCs/Profesor"]
 curve = SubResource("Curve2D_04pcm")
 
-[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta1"]
+[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Profesor/RutaProf"]
 position = Vector2(-1, 0)
-rotates = false
+rotation = -1.5859467
 
-[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta1/RutaFollow"]
-remote_path = NodePath("../../../../Profesor")
+[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Profesor/RutaProf/RutaFollow"]
+remote_path = NodePath("../../..")
 
 [node name="Marcadores" type="Node" parent="."]
 

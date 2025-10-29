@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://ciyad5p3oge3u"]
 
 [ext_resource type="Script" uid="uid://cxh0wtsp3wd65" path="res://source/componentes/personajes/base/personaje.gd" id="1_pkvuc"]
-[ext_resource type="SpriteFrames" uid="uid://kag7yirkasv3" path="res://source/componentes/personajes/alan/alanSprites.tres" id="2_i4ev6"]
+[ext_resource type="SpriteFrames" uid="uid://kag7yirkasv3" path="res://source/componentes/personajes/alan/alanSpritesNew.tres" id="2_i4ev6"]
 [ext_resource type="PackedScene" uid="uid://d0a4ucxe160yd" path="res://source/screens/juego/HUD/hud.tscn" id="3_i4ev6"]
 [ext_resource type="PackedScene" uid="uid://b7jlar0npikkx" path="res://source/componentes/cajas/hit_box.tscn" id="4_seih6"]
 [ext_resource type="PackedScene" uid="uid://d3e7cljx2pkqk" path="res://source/screens/juego/HUD/pant_pausa.tscn" id="4_xk7y5"]

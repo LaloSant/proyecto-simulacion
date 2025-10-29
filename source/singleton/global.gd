@@ -68,7 +68,6 @@ func _ready() -> void:
 	nivelAudioMusica = audio_settings.musica
 	nivelAudioSFX = audio_settings.sfx
 	nivelAudioVoz = audio_settings.voz
-	
 
 ## Guarda datos importantes de la partida
 func guardarPartida() -> void:

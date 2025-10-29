@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://nigs7oc8bv4h" path="res://source/screens/juego/cristal/cristalTileSet.tres" id="2_01jm5"]
 [ext_resource type="AudioStream" uid="uid://bnry3ca3lctfa" path="res://resources/audio/musica/MothIntoFlame.mp3" id="2_xf01l"]
 [ext_resource type="PackedScene" uid="uid://ciyad5p3oge3u" path="res://source/componentes/personajes/base/personaje.tscn" id="3_01jm5"]
-[ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/Tps/transportador.tscn" id="5_838pq"]
+[ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/tps/transportador.tscn" id="5_838pq"]
 [ext_resource type="PackedScene" uid="uid://dfphplmv1hblj" path="res://source/singleton/transiciones/transicion.tscn" id="6_qqxdb"]
 [ext_resource type="PackedScene" uid="uid://lmhgy8eugrgv" path="res://source/componentes/items/item_lampara.tscn" id="7_f0bs0"]
 [ext_resource type="PackedScene" uid="uid://c8hbcu3tjoig" path="res://source/screens/juego/HUD/dialog_window.tscn" id="8_u2qk3"]
@@ -101,6 +101,7 @@ bus = &"Musica"
 parameters/looping = true
 
 [node name="Luz" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0274091, 0.0274092, 0.0274091, 1)
 
 [node name="Oclusores" type="Node" parent="."]
