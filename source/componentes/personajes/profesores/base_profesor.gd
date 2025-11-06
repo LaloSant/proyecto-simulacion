@@ -9,7 +9,7 @@ var marker_a_seguir:Marker2D
 @onready var agente:NavigationAgent2D = $Agente
 var puede_moverse = true
 
-var speed:int = 40 #GLOBAL prof_speed
+var speed:int = 100 #GLOBAL prof_speed
 var posicion_ant:Vector2 = position
 var current_anim:String
 
