@@ -31,8 +31,6 @@ shapes/collision/shape_color=Color(0.662745, 0.682353, 0.192157, 0.65098)
 
 [display]
 
-window/size/viewport_width=720
-window/size/viewport_height=405
 window/stretch/mode="canvas_items"
 
 [global_group]
@@ -229,6 +227,7 @@ locale/locale_filter_mode=0
 
 2d_render/layer_2="Personaje"
 2d_physics/layer_1="Environment"
+2d_navigation/layer_1="Profesores"
 2d_physics/layer_2="Player"
 2d_physics/layer_3="Enemy"
 2d_physics/layer_4="Items"
@@ -236,6 +235,7 @@ locale/locale_filter_mode=0
 2d_physics/layer_6="HurtBoxJugador"
 2d_physics/layer_7="HitBoxNPC"
 2d_physics/layer_8="HurtBoxNPC"
+avoidance/layer_1="Obstaculos"
 
 [rendering]
 
