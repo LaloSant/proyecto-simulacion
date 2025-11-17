@@ -23,7 +23,7 @@ character_name = "Alma"
 [node name="AnSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("2_i03gc")
 animation = &"idle_hor"
-autoplay = "walk_hor"
+autoplay = "idle_hor"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vdach")

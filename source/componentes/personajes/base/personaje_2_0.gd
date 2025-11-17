@@ -6,14 +6,14 @@ var default_speed:int = 100 #GLOBAL.pers_default_speed
 var speed_multiplier:float = 1
 var last_animation:String
 
-enum states {can_move, is_dead}
+enum states {can_move, is_dead, cannot_move}
 var state = states.can_move
 
 func _ready() -> void:
 	set_sprite()
 
 func _physics_process(_delta: float) -> void:
-	if state == states.is_dead:
+	if state == states.is_dead or state == states.cannot_move:
 		return
 	var x = Input.get_axis("ui_left", "ui_right")
 	var y = Input.get_axis("ui_up", "ui_down")

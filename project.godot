@@ -33,6 +33,10 @@ shapes/collision/shape_color=Color(0.662745, 0.682353, 0.192157, 0.65098)
 
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
+
 [global_group]
 
 varo=""
