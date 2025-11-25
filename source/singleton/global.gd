@@ -41,6 +41,8 @@ var contador_dia:int
 var marker_actual = MarkerPosicion.mk_EdificioTSalon
 var escena_actual = ""
 var paginas:Array[bool] = [false, false, false, false, false, false, false, false]
+var numPaginas:int=0
+var tienePaginas:bool=false
 var saleT:bool = false
 
 #Seccion audio

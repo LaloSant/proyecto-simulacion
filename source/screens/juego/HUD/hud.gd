@@ -37,12 +37,11 @@ func consultarMisiones():
 	setNumPaginas()
 
 func setNumPaginas():
-	var numPaginas = 0
 	for tienePagina in GLOBAL.paginas:
 		if tienePagina:
-			numPaginas += 1
-	$PanelMisiones/lblNumPaginas.text = str(numPaginas) + " / 8"
-	if numPaginas == 8:
+			GLOBAL.numPaginas += 1
+	$PanelMisiones/lblNumPaginas.text = str(GLOBAL.numPaginas) + " / 8"
+	if GLOBAL.tienePaginas:
 		$PanelMisiones/TickPaginas.visible = true
 
 func cambioTorta(valor:bool) -> void:

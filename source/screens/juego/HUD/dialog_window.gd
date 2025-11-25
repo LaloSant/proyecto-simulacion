@@ -7,19 +7,23 @@
 '''
 
 class_name DialogWindow extends CanvasLayer
+@export var persona:String
 @export var texto:String
 @export var sound:AudioStream
 @export var tiempo:int
 @onready var lblTexto = $PnlTexto/lbl_texto
+@onready var lblPersona = $PnlTexto2/lbl_persona
 var pers:Personaje
 
 func _ready() -> void:
+	$PnlTexto2/lbl_persona.text = persona
 	$PnlTexto/lbl_texto.text = texto
 	$ASP.stream = sound
 	$Timer1.wait_time = tiempo
 	layer =-5
 
 func actualizaTexto() -> void:
+	lblPersona.text = persona
 	lblTexto.text = texto
 
 func mostrar_dialogo(body:Personaje):

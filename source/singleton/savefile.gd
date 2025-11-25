@@ -23,7 +23,8 @@ func salva_partida():
 		"pliego": GLOBAL.pliego,
 		"naranjas":GLOBAL.naranjas,
 		"torta":GLOBAL.torta,
-		"otorgar_naranjas":GLOBAL.otorgar_naranjas
+		"otorgar_naranjas":GLOBAL.otorgar_naranjas,
+		"tiene_paginas":GLOBAL.tiene_paginas
 	}
 	var jsonString = JSON.stringify(datos)
 	if !FileAccess.file_exists(file_path):

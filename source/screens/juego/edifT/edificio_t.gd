@@ -53,4 +53,8 @@ func _on_personaje_fin_muerte() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Personaje:
-		$DWOcayo.mostrar_dialogo(body)
+		if GLOBAL.numPaginas==8:
+			$DWOcayoThanks.mostrar_dialogo(body)
+			GLOBAL.tienePaginas =true
+		else:
+			$DWOcayo.mostrar_dialogo(body)

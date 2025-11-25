@@ -12,7 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://cyox8ywkadgcp" path="res://resources/audio/gowMisterio.mp3" id="9_tjhh6"]
 [ext_resource type="Texture2D" uid="uid://dhbff6obm5b38" path="res://resources/images/sprites/ocayo/ocayo2.png" id="11_fcnty"]
 [ext_resource type="Texture2D" uid="uid://cnd4bspsdi2hk" path="res://resources/images/sprites/ocayo/ocayo.png" id="12_qs5lx"]
-[ext_resource type="AudioStream" uid="uid://g4un81y5ly6g" path="res://resources/audio/chavo-a-valer-el-semestre.mp3" id="13_qs5lx"]
+[ext_resource type="AudioStream" uid="uid://cv3pegoq44c4j" path="res://resources/audio/bob-omb.mp3" id="13_qs5lx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tjhh6"]
 cull_mode = 2
@@ -59,6 +59,7 @@ bus = &"Musica"
 parameters/looping = true
 
 [node name="Luz" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0605303, 0.0605303, 0.0605303, 1)
 
 [node name="Fondo" type="ColorRect" parent="."]
@@ -263,7 +264,13 @@ frame_progress = 0.852199
 shape = SubResource("RectangleShape2D_tjhh6")
 
 [node name="DWOcayo" parent="." instance=ExtResource("8_63xdy")]
-texto = "chAvo, va a valer vrg el semestre"
+persona = "Prof. Octavio Urbina"
+texto = "chAvo, necesito tu ayuda para recuperar 8 examenes que olvide en ambiental"
+sound = ExtResource("13_qs5lx")
+
+[node name="DWOcayoThanks" parent="." instance=ExtResource("8_63xdy")]
+persona = "Prof. Octavio Urbina"
+texto = "Muchas gracias, por poco me corren"
 sound = ExtResource("13_qs5lx")
 
 [node name="Area2D" type="Area2D" parent="."]

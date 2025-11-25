@@ -4,7 +4,7 @@
 [ext_resource type="AudioStream" uid="uid://c17fi1dll7hq8" path="res://resources/audio/musica/Paloma Ajena - Agua Marina (Cumbia en 8bits).mp3" id="2_cw4fm"]
 [ext_resource type="TileSet" uid="uid://diumo1fqsdv2j" path="res://source/screens/juego/edifAmb/edificio_ambTileSet.tres" id="2_o67al"]
 [ext_resource type="PackedScene" uid="uid://ciyad5p3oge3u" path="res://source/componentes/personajes/base/personaje.tscn" id="3_crit5"]
-[ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/Tps/transportador.tscn" id="4_o67al"]
+[ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/tps/transportador.tscn" id="4_o67al"]
 [ext_resource type="PackedScene" uid="uid://dfphplmv1hblj" path="res://source/singleton/transiciones/transicion.tscn" id="5_crit5"]
 [ext_resource type="Texture2D" uid="uid://c020bj7lxiskl" path="res://resources/images/sprites/npcChava/npcChava2.png" id="7_hnvyw"]
 [ext_resource type="Texture2D" uid="uid://b0akds10vaq27" path="res://resources/images/sprites/npcChava/npcChava.png" id="8_uadl2"]
@@ -40,6 +40,7 @@ bus = &"Musica"
 parameters/looping = true
 
 [node name="Luz" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0605303, 0.0605303, 0.0605303, 1)
 
 [node name="Fondo" type="ColorRect" parent="."]
