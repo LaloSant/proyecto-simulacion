@@ -206,7 +206,7 @@ tile_map_data = PackedByteArray("AAARAKD/AgAKAAgAAAARAKH/AgAKAAkAAAARAKL/AgAKAAo
 tile_set = ExtResource("3_or3ot")
 navigation_enabled = false
 
-[node name="Personaje2_0" parent="." instance=ExtResource("4_r8mfa")]
+[node name="Personaje" parent="." instance=ExtResource("4_r8mfa")]
 position = Vector2(-22, 34)
 
 [node name="NPCs" type="Node2D" parent="."]
@@ -218,25 +218,21 @@ ruta_follow = NodePath("../Rutas/Ruta1/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="Profesor2" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-67, -40)
 character_name = "Maribel"
 ruta_follow = NodePath("../Rutas/Ruta2/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="Profesor3" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-163, -54)
 character_name = "Mauro"
 ruta_follow = NodePath("../Rutas/Ruta2/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="NPC1" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-15, -93)
 character_name = "NPC1"
 ruta_follow = NodePath("../Rutas/Ruta4/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="NPC2" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-64, -97)
 character_name = "NPC2"
 ruta_follow = NodePath("../Rutas/Ruta5/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")

@@ -41,6 +41,5 @@ bus = &"SFX"
 
 [node name="Agente" type="NavigationAgent2D" parent="."]
 path_postprocessing = 1
-debug_enabled = true
 
 [connection signal="target_reached" from="Agente" to="." method="_on_agente_target_reached"]

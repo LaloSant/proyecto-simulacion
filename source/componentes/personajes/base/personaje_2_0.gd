@@ -47,6 +47,8 @@ func _input(event: InputEvent) -> void:
 		speed_multiplier = 1.2
 	if event.is_action_released("CntlKey") or event.is_action_released("Control_B_Circ") or event.is_action_released("ShiftKey") or event.is_action_released("Control_L3"):
 		speed_multiplier = 1
+	if event.is_action_pressed("TECLA_M") or event.is_action_pressed("Control_Back"):
+		$HUD.mostrarMisiones()
 	$AnSprite.speed_scale = speed_multiplier
 	
 func set_sprite():
@@ -59,3 +61,6 @@ func set_sprite():
 		"Yael":
 			recurso = preload("res://source/componentes/personajes/yael/yaelSpritesNew.tres")
 	$AnSprite.set_sprite_frames(recurso)
+
+func state_change(estado):
+	self.state = estado

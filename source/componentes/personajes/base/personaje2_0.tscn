@@ -127,13 +127,10 @@ ignore_rotation = false
 zoom = Vector2(3.7, 3.7)
 
 [node name="HUD" parent="." instance=ExtResource("3_dycxm")]
-visible = false
 
 [node name="pantPausa" parent="HUD" instance=ExtResource("4_0wrrt")]
-visible = false
 
 [node name="CapaTactil" parent="HUD" instance=ExtResource("5_em6n0")]
-visible = false
 
 [node name="GameOver" parent="HUD" instance=ExtResource("6_ax65j")]
 layer = 5

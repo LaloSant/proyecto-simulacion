@@ -8,28 +8,31 @@
 
 extends Node2D
 
+var pers:Personaje_2
+
 func _ready() -> void:
+	pers = $Personaje
+	setPosicionJugador()
+	$Personaje/Camera.zoom = Vector2(2.5,2.5)
 	pass
-	#setPosicionJugador()
-	#$Personaje/camara.zoom = Vector2(2.5,2.5)
 
 func setPosicionJugador() -> void: #Para cuando salga de un edificio o empieze partida
-	$Personaje/Linterna.visible = false
+	$Personaje/Lantern.visible = false
 	if GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EdificioTFuera:
-		$Personaje.position = $Marcadores/EdificioTFuera.position
+		pers.position = $Marcadores/EdificioTFuera.position
 		saleT()
 	elif GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EPrinFuera:
-		$Personaje.position = $Marcadores/EPrincFuera.position
+		pers.position = $Marcadores/EPrincFuera.position
 	elif GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EdificioAmbFuera:
-		$Personaje.position = $Marcadores/EdificioAmbFuera.position
+		pers.position = $Marcadores/EdificioAmbFuera.position
 	elif GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EnsambleFuera:
-		$Personaje.position = $Marcadores/EnsambleFuera.position
+		pers.position = $Marcadores/EnsambleFuera.position
 	elif GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_CristalFuera:
-		$Personaje.position = $Marcadores/CristalFuera.position
+		pers.position = $Marcadores/CristalFuera.position
 	elif GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EdificioXFuera:
-		$Personaje.position = $Marcadores/EdificioXFuera.position
+		pers.position = $Marcadores/EdificioXFuera.position
 	elif GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EdificioMecaFuera:
-		$Personaje.position = $Marcadores/EdificioMecaFuera.position		
+		pers.position = $Marcadores/EdificioMecaFuera.position		
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	transparentar(body)
@@ -51,26 +54,26 @@ func _on_item_lampara_item_obtenido() -> void:
 	$Personaje.tieneLampara = true
 
 func _on_tc_edif_t_body_entered(body: Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		GLOBAL.marker_actual = GLOBAL.MarkerPosicion.mk_EdificioTEntrada
 
 func _on_tc_edif_amb_body_entered(body: Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		GLOBAL.marker_actual= GLOBAL.MarkerPosicion.mk_EdificioAmbEntrada
 
 func _on_tc_ensamble_body_entered(body: Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		GLOBAL.marker_actual = GLOBAL.MarkerPosicion.mk_EnsambleEntrada
 
 func _on_tc_cristal_body_entered(body: Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		GLOBAL.marker_actual = GLOBAL.MarkerPosicion.mk_CristalEntrada
 
 func saleT():
 	if !GLOBAL.saleT:
 		GLOBAL.saleT = true
 		$Dialogo.popup()
-		$Personaje.puedeMoverse = false
+		pers.state_change(pers.states.cannot_move)
 
 func _on_dialogo_confirmed() -> void:
-	$Personaje.puedeMoverse = true
+	pers.state_change(pers.states.can_move)
