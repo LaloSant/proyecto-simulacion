@@ -46,6 +46,7 @@ func carga_partida():
 	GLOBAL.naranjas = datos.naranjas
 	GLOBAL.torta = datos.torta
 	GLOBAL.otorgar_naranjas = datos.otorgar_naranjas
+	GLOBAL.tiene_paginas = datos.tiene_paginas
 	var contador:int = 0
 	for pag in datos.paginas:
 		GLOBAL.paginas.set(contador, pag)
