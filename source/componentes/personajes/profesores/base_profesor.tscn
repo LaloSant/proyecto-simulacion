@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c0dp1u60cjw0k"]
 
 [ext_resource type="Script" uid="uid://dj1ajq85qnxt1" path="res://source/componentes/personajes/profesores/base_profesor.gd" id="1_f4fmm"]
-[ext_resource type="SpriteFrames" uid="uid://dxqilmgvv1ase" path="res://source/componentes/personajes/profesores/base_profesores.tres" id="2_i03gc"]
+[ext_resource type="SpriteFrames" uid="uid://bwckyiedx0j2l" path="res://source/componentes/personajes/profesores/Alma/alma.tres" id="2_f4fmm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vdach"]
 size = Vector2(6, 10)
@@ -21,7 +21,7 @@ script = ExtResource("1_f4fmm")
 character_name = "Alma"
 
 [node name="AnSprite" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("2_i03gc")
+sprite_frames = ExtResource("2_f4fmm")
 animation = &"idle_hor"
 autoplay = "idle_hor"
 

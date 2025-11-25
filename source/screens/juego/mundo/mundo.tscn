@@ -46,11 +46,7 @@ _data = {
 &"RESET": SubResource("Animation_doqp4")
 }
 
-[sub_resource type="Curve2D" id="Curve2D_04pcm"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, -1, 0, 0, 0, 0, 0, -2, -66, 0, 0, 0, 0, -55, -68, 0, 0, 0, 0, -55, -28, 0, 0, 0, 0, 7, -27, 0, 0, 0, 0, 23, -29)
-}
-point_count = 6
+[sub_resource type="Curve2D" id="Curve2D_8v40e"]
 
 [sub_resource type="Animation" id="Animation_r8mfa"]
 resource_name = "Fade_Edificios"
@@ -217,23 +213,93 @@ position = Vector2(-22, 34)
 y_sort_enabled = true
 
 [node name="Profesor" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-36, 0)
+position = Vector2(-103, -65)
 ruta_follow = NodePath("../Rutas/Ruta1/RutaFollow")
+markers_aleatorios = NodePath("../../Marcadores")
+
+[node name="Profesor2" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(-67, -40)
+character_name = "Maribel"
+ruta_follow = NodePath("../Rutas/Ruta2/RutaFollow")
+markers_aleatorios = NodePath("../../Marcadores")
+
+[node name="Profesor3" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(-163, -54)
+character_name = "Mauro"
+ruta_follow = NodePath("../Rutas/Ruta2/RutaFollow")
+markers_aleatorios = NodePath("../../Marcadores")
+
+[node name="NPC1" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(-15, -93)
+character_name = "NPC1"
+ruta_follow = NodePath("../Rutas/Ruta4/RutaFollow")
+markers_aleatorios = NodePath("../../Marcadores")
+
+[node name="NPC2" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(-64, -97)
+character_name = "NPC2"
+ruta_follow = NodePath("../Rutas/Ruta5/RutaFollow")
+markers_aleatorios = NodePath("../../Marcadores")
+
+[node name="NPC3" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(-29, -46)
+character_name = "NPC3"
+ruta_follow = NodePath("../Rutas/Ruta6/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="Rutas" type="Node" parent="NPCs"]
 
 [node name="Ruta1" type="Path2D" parent="NPCs/Rutas"]
-visible = false
 position = Vector2(-35, 0)
-curve = SubResource("Curve2D_04pcm")
 
 [node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta1"]
 position = Vector2(-1, 0)
 rotates = false
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta1/RutaFollow"]
+position = Vector2(-67, -65)
 remote_path = NodePath("../../../../Profesor")
+
+[node name="Ruta2" type="Path2D" parent="NPCs/Rutas"]
+curve = SubResource("Curve2D_8v40e")
+
+[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta2"]
+
+[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta2/RutaFollow"]
+remote_path = NodePath("../../../../Profesor2")
+
+[node name="Ruta3" type="Path2D" parent="NPCs/Rutas"]
+curve = SubResource("Curve2D_8v40e")
+
+[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta3"]
+
+[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta3/RutaFollow"]
+remote_path = NodePath("../../../../Profesor3")
+
+[node name="Ruta4" type="Path2D" parent="NPCs/Rutas"]
+curve = SubResource("Curve2D_8v40e")
+
+[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta4"]
+
+[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta4/RutaFollow"]
+remote_path = NodePath("../../../../NPC1")
+
+[node name="Ruta5" type="Path2D" parent="NPCs/Rutas"]
+curve = SubResource("Curve2D_8v40e")
+
+[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta5"]
+
+[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta5/RutaFollow"]
+remote_path = NodePath("../../../../NPC2")
+
+[node name="Ruta6" type="Path2D" parent="NPCs/Rutas"]
+curve = SubResource("Curve2D_8v40e")
+
+[node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta6"]
+
+[node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta6/RutaFollow"]
+position = Vector2(-29, -46)
+remote_path = NodePath("../../../../NPC3")
 
 [node name="Marcadores" type="Node" parent="."]
 
@@ -400,6 +466,7 @@ position = Vector2(-369.5, 442.5)
 shape = SubResource("RectangleShape2D_q8wrk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 offset_left = -3560.0
 offset_top = -5155.0
 offset_right = 2161.0

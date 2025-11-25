@@ -15,7 +15,7 @@ func _on_body_entered(body: Node2D) -> void:
 		if body.muerto:
 			return
 		body.setPuedeMoverse(false)
-		defPuntoSalida() 
+		defPuntoSalida()
 		await SCN_FADE_IN.cambia_escena(escena)
 	elif body is Personaje_2:
 		body.state = body.states.cannot_move

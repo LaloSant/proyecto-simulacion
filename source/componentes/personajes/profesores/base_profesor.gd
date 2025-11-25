@@ -1,6 +1,6 @@
 class_name Profesor extends CharacterBody2D
 
-@export_enum("Alma", "Maribel", "Ocayo") var character_name:String
+@export_enum("Alma", "Maribel", "Ocayo", "Mauro", "NPC1", "NPC2", "NPC3") var character_name:String
 @export var ruta_follow:PathFollow2D
 @export var markers_aleatorios:Node
 @export var region:NavigationRegion2D
@@ -9,7 +9,7 @@ var marker_a_seguir:Marker2D
 @onready var agente:NavigationAgent2D = $Agente
 var puede_moverse = true
 
-var speed:int = 100 #GLOBAL prof_speed
+var speed:int = 80 #GLOBAL prof_speed
 var posicion_ant:Vector2 = position
 var current_anim:String
 
@@ -56,7 +56,6 @@ func actualizar_anim():
 func actualizar_objetivo():
 	marker_a_seguir = marcadores[randi() % marcadores.size()]
 	agente.target_position = marker_a_seguir.position
-	print("Objetivo: " + str(marker_a_seguir))
 	puede_moverse = false
 	await get_tree().create_timer(3).timeout
 	puede_moverse = true
@@ -66,11 +65,19 @@ func set_sprite():
 	var recurso:Resource
 	match(character_name):
 		"Alma":
-			recurso = preload("res://source/componentes/personajes/profesores/base_profesores.tres")
+			recurso = preload("res://source/componentes/personajes/profesores/Alma/alma.tres")
 		"Maribel":
-			recurso = preload("res://source/componentes/personajes/profesores/base_profesores.tres")
+			recurso = preload("res://source/componentes/personajes/profesores/Maribel/maribel.tres")
 		"Ocayo":
 			recurso = preload("res://source/componentes/personajes/profesores/base_profesores.tres")
+		"Mauro":
+			recurso = preload("res://source/componentes/personajes/profesores/Mauro/mauro.tres")
+		"NPC1":
+			recurso = preload("res://source/componentes/personajes/profesores/npc1/npc1.tres")
+		"NPC2":
+			recurso = preload("res://source/componentes/personajes/profesores/npc2/npc2.tres")
+		"NPC3":
+			recurso = preload("res://source/componentes/personajes/profesores/npc3/npc3.tres")
 	$AnSprite.set_sprite_frames(recurso)
 
 

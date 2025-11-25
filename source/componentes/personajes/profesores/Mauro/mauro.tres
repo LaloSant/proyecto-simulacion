@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://dtcvfcmtam06x"]
+
+[ext_resource type="Texture2D" uid="uid://d1q3yuxrbexqp" path="res://source/componentes/personajes/profesores/Mauro/profeMauro.png" id="1_fstsy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_morpe"]
+atlas = ExtResource("1_fstsy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxk0e"]
+atlas = ExtResource("1_fstsy")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wa5ru"]
+atlas = ExtResource("1_fstsy")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg13f"]
+atlas = ExtResource("1_fstsy")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05wld"]
+atlas = ExtResource("1_fstsy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5f2u"]
+atlas = ExtResource("1_fstsy")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_morpe")
+}],
+"loop": false,
+"name": &"idle_hor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxk0e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wa5ru")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_morpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg13f")
+}],
+"loop": true,
+"name": &"walk_hor",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05wld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5f2u")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 3.0
+}]

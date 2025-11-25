@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://cjosdv33qn3ih"]
+
+[ext_resource type="Texture2D" uid="uid://b1w3egn7361j2" path="res://source/componentes/personajes/profesores/Maribel/profeSimu.png" id="1_u6psw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iu6xc"]
+atlas = ExtResource("1_u6psw")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvvp6"]
+atlas = ExtResource("1_u6psw")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wucl"]
+atlas = ExtResource("1_u6psw")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6qg6d"]
+atlas = ExtResource("1_u6psw")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gui2"]
+atlas = ExtResource("1_u6psw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmi6q"]
+atlas = ExtResource("1_u6psw")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu6xc")
+}],
+"loop": false,
+"name": &"idle_hor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvvp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wucl")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iu6xc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6qg6d")
+}],
+"loop": true,
+"name": &"walk_hor",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gui2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmi6q")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 3.0
+}]
