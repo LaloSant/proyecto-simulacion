@@ -24,7 +24,7 @@ func salva_partida():
 		"naranjas":GLOBAL.naranjas,
 		"torta":GLOBAL.torta,
 		"otorgar_naranjas":GLOBAL.otorgar_naranjas,
-		"tiene_paginas":GLOBAL.tiene_paginas
+		"tienePaginas":GLOBAL.tienePaginas
 	}
 	var jsonString = JSON.stringify(datos)
 	if !FileAccess.file_exists(file_path):
@@ -46,7 +46,7 @@ func carga_partida():
 	GLOBAL.naranjas = datos.naranjas
 	GLOBAL.torta = datos.torta
 	GLOBAL.otorgar_naranjas = datos.otorgar_naranjas
-	GLOBAL.tiene_paginas = datos.tiene_paginas
+	GLOBAL.tienePaginas = datos.tienePaginas
 	var contador:int = 0
 	for pag in datos.paginas:
 		GLOBAL.paginas.set(contador, pag)

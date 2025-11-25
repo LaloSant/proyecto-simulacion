@@ -37,10 +37,11 @@ func consultarMisiones():
 	setNumPaginas()
 
 func setNumPaginas():
+	var numPagLocales =0
 	for tienePagina in GLOBAL.paginas:
 		if tienePagina:
-			GLOBAL.numPaginas += 1
-	$PanelMisiones/lblNumPaginas.text = str(GLOBAL.numPaginas) + " / 8"
+			numPagLocales += 1
+	$PanelMisiones/lblNumPaginas.text = str(numPagLocales) + " / 8"
 	if GLOBAL.tienePaginas:
 		$PanelMisiones/TickPaginas.visible = true
 

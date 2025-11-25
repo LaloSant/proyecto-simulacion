@@ -16,7 +16,7 @@ func _ready() -> void:
 	$Personaje.defaultSpeed = $Personaje.defaultSpeed * 0.5
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		if GLOBAL.naranjas:
 			$Npc/DWChicaThanks.mostrar_dialogo(body)
 			GLOBAL.otorgar_naranjas = true

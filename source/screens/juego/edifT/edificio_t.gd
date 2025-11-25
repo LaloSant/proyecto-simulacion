@@ -52,9 +52,10 @@ func _on_personaje_fin_muerte() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body is Personaje:
-		if GLOBAL.numPaginas==8:
+	if body is Personaje or body is Personaje_2:
+		if $Personaje.tiene_8_paginas():
 			$DWOcayoThanks.mostrar_dialogo(body)
 			GLOBAL.tienePaginas =true
+			$Personaje/HUD.setNumPaginas()
 		else:
 			$DWOcayo.mostrar_dialogo(body)
