@@ -56,4 +56,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			GLOBAL.tienePaginas =true
 			$Personaje/HUD.setNumPaginas()
 		else:
+			GLOBAL.habla_ocayo =true
 			$DWOcayo.mostrar_dialogo(body)

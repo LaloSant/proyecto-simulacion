@@ -34,6 +34,7 @@ var enem_tipo:String
 #Seccion partida
 var libros:bool
 var torta:bool
+var habla_alexis:bool=false
 var otorgar_libro:bool
 var pliego:bool
 var entrega_pliego:bool
@@ -41,6 +42,7 @@ var pers_tieneLampara:bool
 var contador_dia:int
 var marker_actual = MarkerPosicion.mk_EdificioTSalon
 var escena_actual = ""
+var habla_ocayo:bool=false
 var paginas:Array[bool] = [false, false, false, false, false, false, false, false]
 var numPaginas:int=0
 var tienePaginas:bool=false

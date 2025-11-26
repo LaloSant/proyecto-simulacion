@@ -29,11 +29,13 @@ lbl_voz,Audio: Voz,Audio: voice,Audio: voix
 lbl_gameover,Fin de la partida,Game Over,Jeu Termin�
 lbl_controles,Controles tactiles,Tactile controls,Controles tactiles
 lblMisiones,Misiones,Mission,Mission
-lblMisionPaginas,Paginas del diario (Amb.),Pages of diary (Amb),Pages du journal (Amb)
-lblMisionPliego,Recoger documento (Edif. Cristal),Retrieve document (Building Crystal),R�cup�rer le document (B�timent en verre)
+lblMisionPaginas,Paginas del examen (Amb.),Pages of test (Amb),Pages du examen (Amb)
+lblMisionPliego,Recoger documento (Edif. Cristal),Pick Document (Building Crystal),Retrieve document (Building Crystal)
 lblMisionPliego2,Entregar reconocimiento (Centro de computo),Deliver award (Computer center),Livrer le document (Centre informatique)
 lblMisionLibro,Entregar libro (Meca),Deliver book (Meca),Remettez le livre (Meca)
 lblPensRecon,Algo se me habia encargado... debo explorar.,I had been assigned something... I must explore.,On m'avait confi� quelque chose... je dois explorer.
 lblRecojeReco,Es cierto! Me encargaron darselo a alguien en el Centro de computo,Oh right! I must give this to someone in the computer center,C'est vrai ! On m'a demand� de le donner � quelqu'un au centre informatique.
 lblPensando,Pensando,Thinking,Pensant
 lblEntregaRecon,Gracias por entregarme mi reconocimiento!,Thank you for giving me my award!,Merci de m�avoir remis ma r�compense !
+lblHablaOcayo,Habla con el profe Octavio(T),Speak with prof Octavio(T),Parlez au professeur Octavio(T)
+lblHablaAlexis,Habla con el profe Alexis(Meca),Speak with prof Alexis(Meca),Parlez au professeur Alexis(Meca)

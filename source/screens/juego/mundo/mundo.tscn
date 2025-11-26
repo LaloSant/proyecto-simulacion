@@ -480,7 +480,6 @@ position = Vector2(-369.5, 442.5)
 shape = SubResource("RectangleShape2D_q8wrk")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 offset_left = -3560.0
 offset_top = -5155.0
 offset_right = 2161.0
@@ -511,6 +510,8 @@ dialog_autowrap = true
 [connection signal="body_entered" from="Transiciones/TCEdifT" to="." method="_on_tc_edif_t_body_entered"]
 [connection signal="body_entered" from="Transiciones/TCEdifAmb" to="." method="_on_tc_edif_amb_body_entered"]
 [connection signal="body_entered" from="Transiciones/TCEnsamble" to="." method="_on_tc_ensamble_body_entered"]
+[connection signal="body_entered" from="Transiciones/TCEdifX" to="." method="_on_tc_edif_x_body_entered"]
+[connection signal="body_entered" from="Transiciones/TCEdifMeca" to="." method="_on_tc_edif_meca_body_entered"]
 [connection signal="body_entered" from="Transparentar/Edificios" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Transparentar/Edificios" to="." method="_on_area_2d_body_exited"]
 [connection signal="confirmed" from="Dialogo" to="." method="_on_dialogo_confirmed"]

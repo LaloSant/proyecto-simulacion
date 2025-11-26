@@ -22,4 +22,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			GLOBAL.otorgar_libro = true
 			body.entrega_naranjas()
 		else:
+			GLOBAL.habla_alexis=true
 			$Npc/DWAlexisNeed.mostrar_dialogo(body)
