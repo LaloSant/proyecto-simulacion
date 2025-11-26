@@ -95,12 +95,6 @@ offset_bottom = 94.0
 grow_vertical = 2
 text = "btn_start"
 
-[node name="Timer" type="Timer" parent="."]
-process_callback = 0
-wait_time = 45.0
-one_shot = true
-autostart = true
-
 [node name="ANPCircle" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_habs0")
@@ -113,5 +107,3 @@ stream = ExtResource("4_5wqp8")
 volume_db = 15.0
 autoplay = true
 bus = &"Musica"
-
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

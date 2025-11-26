@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://ckp8mg1snkfpe"]
+[gd_scene load_steps=20 format=4 uid="uid://ckp8mg1snkfpe"]
 
 [ext_resource type="Script" uid="uid://bpebvnns0ych4" path="res://source/screens/juego/edifAmb/edificio_amb.gd" id="1_ylvr1"]
 [ext_resource type="AudioStream" uid="uid://c6d2d6wt32dnk" path="res://resources/audio/musica/solin.mp3" id="2_ylvr1"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ciyad5p3oge3u" path="res://source/componentes/personajes/base/personaje.tscn" id="4_h1tbr"]
 [ext_resource type="PackedScene" uid="uid://bddno62kg4il7" path="res://source/componentes/personajes/enemigos/enemigo_base.tscn" id="5_ueu2e"]
 [ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/tps/transportador.tscn" id="6_5h5ae"]
-[ext_resource type="PackedScene" uid="uid://lmhgy8eugrgv" path="res://source/componentes/items/item_lampara.tscn" id="7_ngs8f"]
 [ext_resource type="PackedScene" uid="uid://c8hbcu3tjoig" path="res://source/screens/juego/HUD/dialog_window.tscn" id="8_shijo"]
 [ext_resource type="AudioStream" uid="uid://cyox8ywkadgcp" path="res://resources/audio/gowMisterio.mp3" id="9_at3cn"]
 [ext_resource type="PackedScene" uid="uid://dfphplmv1hblj" path="res://source/singleton/transiciones/transicion.tscn" id="10_86rvo"]
@@ -406,19 +405,8 @@ position = Vector2(1320, 477)
 
 [node name="Items" type="Node" parent="."]
 
-[node name="item_lampara" parent="Items" instance=ExtResource("7_ngs8f")]
-position = Vector2(939, 486)
-scale = Vector2(0.7, 0.7)
-
-[node name="DWLampara" parent="Items" instance=ExtResource("8_shijo")]
-texto = "Obtuviste lampara. Presiona \"q\" o boton \"X\"."
-
-[node name="DWNeedLampara" parent="Items" instance=ExtResource("8_shijo")]
-texto = "Deberia buscar una lampara."
-sound = ExtResource("9_at3cn")
-
 [node name="DWNeedPaginas" parent="Items" instance=ExtResource("8_shijo")]
-texto = "Necesito recolectar las 8 paginas de este edificio"
+texto = "Necesito recolectar los 8 examenes de este edificio"
 sound = ExtResource("9_at3cn")
 
 [node name="Paginas" type="Node" parent="Items"]
@@ -475,5 +463,4 @@ puntoSalida = "mk_EdificioAmbFuera"
 [connection signal="cambio_lugar" from="TpNuevo/Pb_P1Tp" to="." method="_on_pb_p_1_tp_cambio_lugar"]
 [connection signal="body_entered" from="TpNuevo/Salon2_PBTp" to="." method="_on_salon_2_pb_tp_body_entered"]
 [connection signal="body_entered" from="TpNuevo/Salon8_PBTp" to="." method="_on_salon_8_pb_tp_body_entered"]
-[connection signal="item_obtenido" from="Items/item_lampara" to="." method="_on_item_lampara_item_obtenido"]
 [connection signal="body_entered" from="Transicion" to="." method="_on_transicion_body_entered"]

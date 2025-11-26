@@ -10,6 +10,3 @@ extends Node2D
 
 func _ready() -> void:
 	$Panel/btn_AMenuPrin.grab_focus()
-
-func _on_timer_timeout() -> void:
-	SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_video_intro.tscn")

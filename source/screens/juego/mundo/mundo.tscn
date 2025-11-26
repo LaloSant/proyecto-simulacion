@@ -258,7 +258,7 @@ position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_chrhl")
 
 [node name="DWEntregaDoc" parent="NPCs/NPC4" instance=ExtResource("6_8v40e")]
-persona = "Medina"
+persona = "Prof. Alejandro Medina"
 texto = "lblEntregaRecon"
 
 [node name="Rutas" type="Node" parent="NPCs"]

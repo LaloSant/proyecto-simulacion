@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dpcx62mjiyapr" path="res://source/screens/juego/cristal/cristal.gd" id="1_b8l5q"]
 [ext_resource type="TileSet" uid="uid://nigs7oc8bv4h" path="res://source/screens/juego/cristal/cristalTileSet.tres" id="2_01jm5"]
-[ext_resource type="AudioStream" uid="uid://bnry3ca3lctfa" path="res://resources/audio/musica/MothIntoFlame.mp3" id="2_xf01l"]
+[ext_resource type="AudioStream" uid="uid://c03a5y0gnphhh" path="res://resources/audio/musica/Promises  (8 Bit Version).mp3" id="2_dwt70"]
 [ext_resource type="PackedScene" uid="uid://ciyad5p3oge3u" path="res://source/componentes/personajes/base/personaje.tscn" id="3_01jm5"]
 [ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/tps/transportador.tscn" id="5_838pq"]
 [ext_resource type="PackedScene" uid="uid://dfphplmv1hblj" path="res://source/singleton/transiciones/transicion.tscn" id="6_qqxdb"]
@@ -32,7 +32,7 @@ animations = [{
 script = ExtResource("1_b8l5q")
 
 [node name="Musica" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_xf01l")
+stream = ExtResource("2_dwt70")
 volume_db = 16.0
 autoplay = true
 bus = &"Musica"
