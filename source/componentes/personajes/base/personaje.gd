@@ -182,7 +182,7 @@ func getSpritePorNombre(nom:String) -> Resource:
 		"Yael":
 			return preload("res://source/componentes/personajes/yael/yaelSprites.tres")
 		"Alan":
-			return preload("res://source/componentes/personajes/alan/alanSpritesNew.tres")
+			return preload("res://source/componentes/personajes/alan/alanSprites.tres")
 	return preload("res://source/componentes/personajes/yael/yaelSprites.tres")
 
 func has_pliego() -> bool:

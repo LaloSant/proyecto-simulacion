@@ -10,7 +10,6 @@ enum states {can_move, is_dead, cannot_move}
 var state = states.can_move
 
 func _ready() -> void:
-	print(GLOBAL.pers_nombre)
 	character_name = GLOBAL.pers_nombre
 	set_sprite()
 

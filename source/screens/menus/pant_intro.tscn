@@ -3,7 +3,7 @@
 [ext_resource type="FontFile" uid="uid://bqc8jwwk78iqu" path="res://resources/lang/MinecraftBoldItalic-1y1e.otf" id="1_2hftb"]
 [ext_resource type="Script" uid="uid://b31c2cepenln8" path="res://source/screens/menus/pant_intro.gd" id="1_3jl3o"]
 [ext_resource type="PackedScene" uid="uid://rerxv8lts2mu" path="res://source/componentes/btn_a_menu_prin.tscn" id="2_ij8cx"]
-[ext_resource type="AudioStream" uid="uid://8qlkafu1awr8" path="res://resources/audio/musica/Opening.mp3" id="4_5wqp8"]
+[ext_resource type="AudioStream" uid="uid://dmjgsgv2a73jo" path="res://resources/audio/musica/MusicaIntropvz8b.mp3" id="4_5wqp8"]
 
 [sub_resource type="Gradient" id="Gradient_mhdur"]
 offsets = PackedFloat32Array(0.149351, 0.915584)
@@ -104,6 +104,5 @@ playback_auto_capture_transition_type = 5
 
 [node name="Soundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_5wqp8")
-volume_db = 15.0
 autoplay = true
 bus = &"Musica"
