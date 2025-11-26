@@ -9,8 +9,8 @@
 extends Node2D
 
 func _ready() -> void:
-	$Panel/VBoxContainer/btn_iniciar.grab_focus()
-	$Panel/VBoxContainer/btn_continuar.disabled = !SAVEFILE.existe_partida()
+	$VBoxContainer/btn_iniciar.grab_focus()
+	$VBoxContainer/btn_continuar.disabled = !SAVEFILE.existe_partida()
 	THR_LOADER.load_trigger("res://source/screens/menus/pant_creditos.tscn")
 
 func _on_btn_iniciar_pressed() -> void:
@@ -37,5 +37,5 @@ func _on_btn_creditos_pressed() -> void:
 func _on_btn_salir_pressed() -> void:
 	get_tree().quit()
 	
-func _on_timer_video_intro_timeout() -> void:
-	SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_video_intro.tscn")
+#func _on_timer_video_intro_timeout() -> void:
+	#SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_video_intro.tscn")
