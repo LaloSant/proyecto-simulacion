@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bt2k7hof7sakh"]
+[gd_scene load_steps=13 format=3 uid="uid://bt2k7hof7sakh"]
 
 [ext_resource type="Script" uid="uid://du8j6m4iym2tf" path="res://source/screens/menus/pant_principal.gd" id="1_ut4m4"]
 [ext_resource type="AudioStream" uid="uid://ey36kg8nbk2u" path="res://resources/audio/ittolInicioTheme.mp3" id="3_xyw32"]
@@ -10,6 +10,13 @@
 [ext_resource type="Script" uid="uid://bnst3tf0ssw18" path="res://source/screens/menus/parallax_layer_2.gd" id="7_avx6v"]
 [ext_resource type="Texture2D" uid="uid://disa8ibyntans" path="res://resources/images/tec.png" id="7_xyw32"]
 [ext_resource type="Texture2D" uid="uid://bglrq8x8o63bj" path="res://resources/images/arboles.png" id="9_xyw32"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyw32"]
+bg_color = Color(0, 0, 0, 0.64705884)
+border_color = Color(0, 0, 0, 0.7921569)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hurmf"]
+bg_color = Color(0, 0, 0, 0.64705884)
 
 [node name="PantPrincipal" type="Node2D"]
 script = ExtResource("1_ut4m4")
@@ -27,8 +34,12 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../btn_salir")
 focus_neighbor_bottom = NodePath("../btn_continuar")
 theme = ExtResource("4_y8nws")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.039215688, 0.16470589, 0.4, 1)
+theme_override_colors/font_hover_color = Color(0.3019608, 0.6392157, 1, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_xyw32")
 text = "btn_iniciar"
 
 [node name="btn_continuar" type="Button" parent="VBoxContainer"]
@@ -36,8 +47,11 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../btn_iniciar")
 focus_neighbor_bottom = NodePath("../btn_config")
 theme = ExtResource("4_y8nws")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.039215688, 0.16470589, 0.4, 1)
+theme_override_colors/font_hover_color = Color(0.3019608, 0.6392157, 1, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hurmf")
 text = "btn_continuar"
 
 [node name="btn_config" type="Button" parent="VBoxContainer"]
@@ -45,8 +59,11 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../btn_continuar")
 focus_neighbor_bottom = NodePath("../btn_creditos")
 theme = ExtResource("4_y8nws")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.039215688, 0.16470589, 0.4, 1)
+theme_override_colors/font_hover_color = Color(0.3019608, 0.6392157, 1, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hurmf")
 text = "btn_config"
 
 [node name="btn_creditos" type="Button" parent="VBoxContainer"]
@@ -54,8 +71,11 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../btn_config")
 focus_neighbor_bottom = NodePath("../btn_salir")
 theme = ExtResource("4_y8nws")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.039215688, 0.16470589, 0.4, 1)
+theme_override_colors/font_hover_color = Color(0.3019608, 0.6392157, 1, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hurmf")
 text = "btn_creditos"
 
 [node name="btn_salir" type="Button" parent="VBoxContainer"]
@@ -63,8 +83,11 @@ layout_mode = 2
 focus_neighbor_top = NodePath("../btn_creditos")
 focus_neighbor_bottom = NodePath("../btn_iniciar")
 theme = ExtResource("4_y8nws")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.039215688, 0.16470589, 0.4, 1)
+theme_override_colors/font_hover_color = Color(0.3019608, 0.6392157, 1, 1)
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_hurmf")
 text = "btn_salir"
 
 [node name="Panel" type="Panel" parent="."]
@@ -89,12 +112,12 @@ texture = ExtResource("4_ac2n8")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(741, 47)
-motion_mirroring = Vector2(1200, 0)
+motion_mirroring = Vector2(1700, 0)
 script = ExtResource("5_avx6v")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(0, -1)
-scale = Vector2(0.1, 0.1)
+position = Vector2(356.5, -1)
+scale = Vector2(0.14606668, 0.1)
 texture = ExtResource("5_pb7it")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -102,8 +125,8 @@ motion_mirroring = Vector2(1700, 0)
 script = ExtResource("7_avx6v")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(999, 96.99997)
-scale = Vector2(0.2, 0.2)
+position = Vector2(1045, 96.99997)
+scale = Vector2(0.20920001, 0.2)
 texture = ExtResource("6_avx6v")
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground"]
