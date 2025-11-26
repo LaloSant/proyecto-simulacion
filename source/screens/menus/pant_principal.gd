@@ -16,8 +16,8 @@ func _ready() -> void:
 func _on_btn_iniciar_pressed() -> void:
 	GLOBAL.continuar_partida = false
 	GLOBAL.marker_actual = GLOBAL.MarkerPosicion.mk_EdificioTSalon
-	GLOBAL.naranjas = false
-	GLOBAL.otorgar_naranjas = false
+	GLOBAL.libros = false
+	GLOBAL.otorgar_libro = false
 	GLOBAL.torta = false
 	GLOBAL.saleT = false
 	GLOBAL.pliego = false

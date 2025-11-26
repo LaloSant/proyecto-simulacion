@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ciyad5p3oge3u" path="res://source/componentes/personajes/base/personaje.tscn" id="3_crit5"]
 [ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/tps/transportador.tscn" id="4_o67al"]
 [ext_resource type="PackedScene" uid="uid://dfphplmv1hblj" path="res://source/singleton/transiciones/transicion.tscn" id="5_crit5"]
-[ext_resource type="Texture2D" uid="uid://c020bj7lxiskl" path="res://resources/images/sprites/npcChava/npcChava2.png" id="7_hnvyw"]
-[ext_resource type="Texture2D" uid="uid://b0akds10vaq27" path="res://resources/images/sprites/npcChava/npcChava.png" id="8_uadl2"]
+[ext_resource type="Texture2D" uid="uid://b458vavbhbjbn" path="res://resources/images/sprites/alexis/alexis2.png" id="7_cw4fm"]
+[ext_resource type="Texture2D" uid="uid://cll5o5y3yd408" path="res://resources/images/sprites/alexis/alexis.png" id="8_aad6h"]
 [ext_resource type="PackedScene" uid="uid://c8hbcu3tjoig" path="res://source/screens/juego/HUD/dialog_window.tscn" id="9_cw4fm"]
 [ext_resource type="AudioStream" uid="uid://cv3pegoq44c4j" path="res://resources/audio/bob-omb.mp3" id="10_cw4fm"]
 
@@ -15,10 +15,10 @@
 animations = [{
 "frames": [{
 "duration": 1.5,
-"texture": ExtResource("7_hnvyw")
+"texture": ExtResource("7_cw4fm")
 }, {
 "duration": 1.5,
-"texture": ExtResource("8_uadl2")
+"texture": ExtResource("8_aad6h")
 }],
 "loop": true,
 "name": &"default",
@@ -117,7 +117,6 @@ puntoSalida = "mk_EdificioMecaFuera"
 position = Vector2(743.937, 361.055)
 sprite_frames = SubResource("SpriteFrames_cw4fm")
 autoplay = "default"
-frame = 1
 frame_progress = 0.226415
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Npc/NpcChava"]
@@ -132,12 +131,14 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Npc/Area2D"]
 shape = SubResource("RectangleShape2D_hnvyw")
 
-[node name="DWChicaNeed" parent="Npc" instance=ExtResource("9_cw4fm")]
-texto = "Necesitamos naranjas para los de las guardias"
+[node name="DWAlexisNeed" parent="Npc" instance=ExtResource("9_cw4fm")]
+persona = "Prof. Alexis Serrano"
+texto = "Olvide mi libro de Ecuaciones en el X, me lo podrias traer?"
 sound = ExtResource("10_cw4fm")
 
-[node name="DWChicaThanks" parent="Npc" instance=ExtResource("9_cw4fm")]
-texto = "Muchas gracias, teniamos hambre"
+[node name="DWAlexisThanks" parent="Npc" instance=ExtResource("9_cw4fm")]
+persona = "Prof. Alexis Serrano"
+texto = "Muchas gracias, no queria volver a comprarlo"
 sound = ExtResource("10_cw4fm")
 
 [connection signal="body_entered" from="Npc/Area2D" to="." method="_on_area_2d_body_entered"]

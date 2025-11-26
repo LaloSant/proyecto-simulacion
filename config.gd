@@ -29,9 +29,9 @@ func _ready() -> void:
 		config.set_value("Personaje", "tieneLampara", false)
 		config.set_value("Personaje","pliego",false)
 		config.set_value("Personaje","contTactiles",false)
-		config.set_value("Personaje","naranjas",false)
+		config.set_value("Personaje","libros",false)
 		config.set_value("Personaje","torta",false)
-		config.set_value("Personaje","otorgar_naranjas",false)
+		config.set_value("Personaje","otorgar_libro",false)
 		config.set_value("Personaje","otorgar_torta",false)
 
 		#Seccion audio

@@ -32,9 +32,9 @@ var pers_nombre:String
 var enem_tipo:String
 
 #Seccion partida
-var naranjas:bool
+var libros:bool
 var torta:bool
-var otorgar_naranjas:bool
+var otorgar_libro:bool
 var pliego:bool
 var pers_tieneLampara:bool
 var contador_dia:int

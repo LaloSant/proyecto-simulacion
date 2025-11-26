@@ -12,8 +12,8 @@ extends Node2D
 func _ready() -> void:
 	if GLOBAL.marker_actual == GLOBAL.MarkerPosicion.mk_EdificioXEntrada:
 		$Personaje.position = $Markers/Entrada.position
-	$Items/ItemNaranjas.visible= !GLOBAL.naranjas
-	$Items/ItemNaranjas.monitorable=!GLOBAL.naranjas
+	$Items/ItemLibro.visible= !GLOBAL.libros
+	$Items/ItemLibro.monitorable=!GLOBAL.libros
 	$Items/ItemTorta.visible= !GLOBAL.torta
 	$Items/ItemTorta.monitorable=!GLOBAL.torta
 	$Personaje.defaultSpeed = $Personaje.defaultSpeed * 0.65

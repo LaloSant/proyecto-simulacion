@@ -31,5 +31,4 @@ lbl_controles,Controles tactiles,Tactile controls,Controles tactiles
 lblMisiones,Misiones,Mission,Mission
 lblMisionPaginas,Paginas del diario (Amb.),Pages of diary (Amb),Pages du journal (Amb)
 lblMisionPliego, Pliego petitorio (Cristal),Petition document (Crystal),Document de pétition (Verre)
-lblMisionNaranjas,Entregar narajnas (Meca),Deliver oranges (Meca),Livrer des oranges (Meca)
-,,,
+lblMisionLibro,Entregar libro (Meca),Deliver book (Meca),Remettez le livre (Meca)

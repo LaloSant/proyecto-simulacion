@@ -17,9 +17,9 @@ func _ready() -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Personaje or body is Personaje_2:
-		if GLOBAL.naranjas:
-			$Npc/DWChicaThanks.mostrar_dialogo(body)
-			GLOBAL.otorgar_naranjas = true
+		if GLOBAL.libros:
+			$Npc/DWAlexisThanks.mostrar_dialogo(body)
+			GLOBAL.otorgar_libro = true
 			body.entrega_naranjas()
 		else:
-			$Npc/DWChicaNeed.mostrar_dialogo(body)
+			$Npc/DWAlexisNeed.mostrar_dialogo(body)

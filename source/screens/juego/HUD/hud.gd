@@ -32,7 +32,7 @@ func mostrarMisiones():
 	$PanelMisiones.visible = !$PanelMisiones.visible
 
 func consultarMisiones():
-	$PanelMisiones/TickNaranjas.visible = GLOBAL.otorgar_naranjas
+	$PanelMisiones/TickNaranjas.visible = GLOBAL.otorgar_libro
 	$PanelMisiones/TickPliego.visible = GLOBAL.pliego
 	setNumPaginas()
 
