@@ -1,6 +1,6 @@
 class_name Profesor extends CharacterBody2D
 
-@export_enum("Alma", "Maribel", "Ocayo", "Mauro", "NPC1", "NPC2", "NPC3") var character_name:String
+@export_enum("Alma", "Maribel", "Ocayo", "Mauro", "NPC1", "NPC2", "NPC3", "NPC4") var character_name:String
 @export var ruta_follow:PathFollow2D
 @export var markers_aleatorios:Node
 @export var region:NavigationRegion2D
@@ -24,8 +24,9 @@ func _process(delta: float) -> void:
 	if !puede_moverse:
 		return
 	if marker_a_seguir == null:
-		ruta_follow.progress += speed * delta
-		actualizar_anim()
+		#ruta_follow.progress += speed * delta
+		#actualizar_anim()
+		pass
 
 func _physics_process(_delta: float) -> void:
 	if !puede_moverse:
@@ -59,7 +60,6 @@ func actualizar_objetivo():
 	puede_moverse = false
 	await get_tree().create_timer(3).timeout
 	puede_moverse = true
-	
 
 func set_sprite():
 	var recurso:Resource
@@ -78,6 +78,8 @@ func set_sprite():
 			recurso = preload("res://source/componentes/personajes/profesores/npc2/npc2.tres")
 		"NPC3":
 			recurso = preload("res://source/componentes/personajes/profesores/npc3/npc3.tres")
+		"NPC4":
+			recurso = preload("res://source/componentes/personajes/profesores/npc4/npc4.tres")
 	$AnSprite.set_sprite_frames(recurso)
 
 

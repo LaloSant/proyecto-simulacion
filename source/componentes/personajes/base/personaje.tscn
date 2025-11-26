@@ -108,10 +108,8 @@ bus = &"SFX"
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_i4ev6")
-animation = &"muerte"
-autoplay = "idle_abj"
-frame = 25
-frame_progress = 1.0
+animation = &"idle_hor"
+autoplay = "idle_hor"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 visible = false
@@ -130,6 +128,7 @@ occluder = SubResource("OccluderPolygon2D_cemx0")
 occluder_light_mask = 2
 
 [node name="Linterna" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(2, 1)
 scale = Vector2(6.30664, 6.30664)
 color = Color(1, 0.956863, 0.772549, 1)
@@ -145,6 +144,7 @@ texture_scale = 1.5
 [node name="pantPausa" parent="HUD" instance=ExtResource("4_xk7y5")]
 
 [node name="CapaTactil" parent="HUD" instance=ExtResource("5_0yiej")]
+visible = false
 
 [node name="GameOver" parent="HUD" instance=ExtResource("6_etlm4")]
 layer = 5

@@ -86,10 +86,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -94.5
+offset_left = -110.0
 offset_top = 16.0
-offset_right = 94.5
-offset_bottom = 46.0
+offset_right = 110.0
+offset_bottom = 51.0
 grow_horizontal = 2
 theme = ExtResource("4_gxufb")
 theme_override_font_sizes/font_size = 35
@@ -106,7 +106,7 @@ offset_right = 268.0
 offset_bottom = -105.0
 grow_vertical = 2
 theme = ExtResource("4_gxufb")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 24
 text = "lblMisionPliego"
 
 [node name="TickPliego" type="Sprite2D" parent="PanelMisiones"]

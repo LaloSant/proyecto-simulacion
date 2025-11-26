@@ -14,6 +14,7 @@ class_name DialogWindow extends CanvasLayer
 @onready var lblTexto = $PnlTexto/lbl_texto
 @onready var lblPersona = $PnlTexto2/lbl_persona
 var pers:Personaje
+var pers2_0:Personaje_2
 
 func _ready() -> void:
 	$PnlTexto2/lbl_persona.text = persona
@@ -26,9 +27,14 @@ func actualizaTexto() -> void:
 	lblPersona.text = persona
 	lblTexto.text = texto
 
-func mostrar_dialogo(body:Personaje):
-	pers = body
-	pers.puedeMoverse = false
+func mostrar_dialogo(body):
+	
+	if body is Personaje:
+		pers = body
+		pers.puedeMoverse = false
+	else:
+		pers2_0 = body
+		pers2_0.state_change(pers2_0.states.cannot_move)
 	actualizaTexto()
 	lblTexto.visible_characters = 0
 	layer = 1
@@ -46,5 +52,8 @@ func _on_timer_timeout() -> void:
 	$Timer2.start()
 
 func _on_timer_2_timeout() -> void:
-	pers.puedeMoverse = true
+	if pers is Personaje:
+		pers.puedeMoverse = true
+	else:
+		pers2_0.state_change(pers2_0.states.can_move)
 	layer = -5

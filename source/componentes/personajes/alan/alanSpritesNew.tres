@@ -33,6 +33,30 @@
 [resource]
 animations = [{
 "frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_b54mw")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_7wgvh")
+}],
+"loop": true,
+"name": &"idle_hor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_yuwb1")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
 "duration": 10.0,
 "texture": ExtResource("1_x4y60")
 }, {
@@ -112,32 +136,8 @@ animations = [{
 "texture": ExtResource("5_0yfjb")
 }],
 "loop": false,
-"name": &"death",
+"name": &"muerte",
 "speed": 4.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("6_b54mw")
-}],
-"loop": true,
-"name": &"idle_down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_7wgvh")
-}],
-"loop": true,
-"name": &"idle_hor",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_yuwb1")
-}],
-"loop": true,
-"name": &"idle_up",
-"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

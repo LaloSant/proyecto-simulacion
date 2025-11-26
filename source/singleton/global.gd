@@ -36,6 +36,7 @@ var libros:bool
 var torta:bool
 var otorgar_libro:bool
 var pliego:bool
+var entrega_pliego:bool
 var pers_tieneLampara:bool
 var contador_dia:int
 var marker_actual = MarkerPosicion.mk_EdificioTSalon

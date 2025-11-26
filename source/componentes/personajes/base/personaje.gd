@@ -159,7 +159,7 @@ func recibe_danio(danio:int, desdeX:int, desdeY:int) -> void:
 		muerto = true
 		setPuedeMoverse(false)
 		reproduceSonido("Muerte")
-		cambiar_animacion("muerte")
+		cambiar_animacion("death")
 	$HUD.actualizar_salud(salud)
 	if velocity == Vector2.ZERO:
 		velocity.x = defaultSpeed * desdeX
@@ -182,7 +182,7 @@ func getSpritePorNombre(nom:String) -> Resource:
 		"Yael":
 			return preload("res://source/componentes/personajes/yael/yaelSprites.tres")
 		"Alan":
-			return preload("res://source/componentes/personajes/alan/alanSpritesNew.tres")
+			return preload("res://source/componentes/personajes/alan/alanSprites.tres")
 	return preload("res://source/componentes/personajes/yael/yaelSprites.tres")
 
 func has_pliego() -> bool:

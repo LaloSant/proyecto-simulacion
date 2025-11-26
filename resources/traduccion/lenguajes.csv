@@ -30,5 +30,10 @@ lbl_gameover,Fin de la partida,Game Over,Jeu Terminé
 lbl_controles,Controles tactiles,Tactile controls,Controles tactiles
 lblMisiones,Misiones,Mission,Mission
 lblMisionPaginas,Paginas del diario (Amb.),Pages of diary (Amb),Pages du journal (Amb)
-lblMisionPliego, Pliego petitorio (Cristal),Petition document (Crystal),Document de pétition (Verre)
+lblMisionPliego,Recoger documento (Edif. Cristal),Retrieve document (Building Crystal),Récupérer le document (Bâtiment en verre)
+lblMisionPliego2,Entregar reconocimiento (Centro de computo),Deliver award (Computer center),Livrer le document (Centre informatique)
 lblMisionLibro,Entregar libro (Meca),Deliver book (Meca),Remettez le livre (Meca)
+lblPensRecon,Algo se me habia encargado... debo explorar.,I had been assigned something... I must explore.,On m'avait confié quelque chose... je dois explorer.
+lblRecojeReco,Es cierto! Me encargaron darselo a alguien en el Centro de computo,Oh right! I must give this to someone in the computer center,C'est vrai ! On m'a demandé de le donner à quelqu'un au centre informatique.
+lblPensando,Pensando,Thinking,Pensant
+lblEntregaRecon,Gracias por entregarme mi reconocimiento!,Thank you for giving me my award!,Merci de m’avoir remis ma récompense !

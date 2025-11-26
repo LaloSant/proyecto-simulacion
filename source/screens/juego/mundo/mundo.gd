@@ -41,11 +41,11 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 	de_transparentar(body)
 
 func transparentar(body:Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		$Transparentar/ANPModulate.play("Fade_Edificios")
 
 func de_transparentar(body:Node2D) -> void:
-	if body is Personaje:
+	if body is Personaje or body is Personaje_2:
 		$Transparentar/ANPModulate.play_backwards("Fade_Edificios")
 
 func _on_item_lampara_item_obtenido() -> void:
@@ -77,3 +77,9 @@ func saleT():
 
 func _on_dialogo_confirmed() -> void:
 	pers.state_change(pers.states.can_move)
+
+func _on_area_body_entered(body: Node2D) -> void:
+	if body is Personaje or body is Personaje_2:
+		if GLOBAL.pliego:
+			$NPCs/NPC4/DWEntregaDoc.mostrar_dialogo(body)
+			GLOBAL.entrega_pliego = true

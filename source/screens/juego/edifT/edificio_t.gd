@@ -25,7 +25,6 @@ func _ready() -> void:
 		$Personaje.position = $TpNuevo/Entrada.position
 		$Personaje/HUD/lblInfo.text = "lbl_Pb"
 
-	
 func _process(delta: float) -> void:
 	$Enemigos/GuardianP.actualizarPos($Rutas/RtaPasillo/RtaFPasillo, delta)
 
@@ -49,7 +48,6 @@ func _on_item_lampara_item_obtenido() -> void:
 func _on_personaje_fin_muerte() -> void:
 	$Musica.playing = false
 	$Enemigos/GuardianP/SFX.playing = false
-
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Personaje or body is Personaje_2:

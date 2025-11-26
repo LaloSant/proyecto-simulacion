@@ -21,6 +21,7 @@ func salva_partida():
 		"escenaActual": GLOBAL.escena_actual,
 		"nombre": GLOBAL.pers_nombre,
 		"pliego": GLOBAL.pliego,
+		"entrega_pliego": GLOBAL.entrega_pliego,
 		"libros":GLOBAL.libros,
 		"torta":GLOBAL.torta,
 		"otorgar_libro":GLOBAL.otorgar_libro,
@@ -43,6 +44,7 @@ func carga_partida():
 	GLOBAL.pers_salud = datos.salud
 	GLOBAL.pers_tieneLampara =datos.pers_tieneLampara
 	GLOBAL.pliego = datos.pliego
+	GLOBAL.entrega_pliego = datos.entrega_pliego
 	GLOBAL.libros = datos.libros
 	GLOBAL.torta = datos.torta
 	GLOBAL.otorgar_libro = datos.otorgar_libro

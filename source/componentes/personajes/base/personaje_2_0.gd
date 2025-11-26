@@ -10,6 +10,8 @@ enum states {can_move, is_dead, cannot_move}
 var state = states.can_move
 
 func _ready() -> void:
+	print(GLOBAL.pers_nombre)
+	character_name = GLOBAL.pers_nombre
 	set_sprite()
 
 func _physics_process(_delta: float) -> void:
@@ -49,6 +51,9 @@ func _input(event: InputEvent) -> void:
 		speed_multiplier = 1
 	if event.is_action_pressed("TECLA_M") or event.is_action_pressed("Control_Back"):
 		$HUD.mostrarMisiones()
+	if event.is_action_pressed("TECLA_P") or event.is_action_pressed("Control_Start"):
+		if !get_tree().paused and !$HUD/pantPausa.on_pause:
+			$HUD/pantPausa.procesar()
 	$AnSprite.speed_scale = speed_multiplier
 	
 func set_sprite():

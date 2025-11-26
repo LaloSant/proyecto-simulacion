@@ -33,7 +33,9 @@ func mostrarMisiones():
 
 func consultarMisiones():
 	$PanelMisiones/TickNaranjas.visible = GLOBAL.otorgar_libro
-	$PanelMisiones/TickPliego.visible = GLOBAL.pliego
+	$PanelMisiones/TickPliego.visible = GLOBAL.entrega_pliego
+	if GLOBAL.pliego:
+		$PanelMisiones/lblMisionPliego.text = "lblMisionPliego2"
 	setNumPaginas()
 
 func setNumPaginas():
