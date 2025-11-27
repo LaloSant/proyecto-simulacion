@@ -54,6 +54,8 @@ var nivelAudioMusica:float
 var nivelAudioSFX:float
 var nivelAudioVoz:float
 
+var file_path = "user://gamsesave.json" if OS.get_name() == "Android" or OS.get_name()== "macOS" else "res://gamesave.json"
+
 func _ready() -> void:
 	#Carga de idioma activo
 	var lenguaje_settings = CONFIG_FILE.load_lenguaje_setting()

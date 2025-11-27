@@ -144,7 +144,6 @@ texture_scale = 1.5
 [node name="pantPausa" parent="HUD" instance=ExtResource("4_xk7y5")]
 
 [node name="CapaTactil" parent="HUD" instance=ExtResource("5_0yiej")]
-visible = false
 
 [node name="GameOver" parent="HUD" instance=ExtResource("6_etlm4")]
 layer = 5
