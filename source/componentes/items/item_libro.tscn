@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqd88yxl6imvi"]
+[gd_scene load_steps=4 format=3 uid="uid://fyj2xdipatna"]
 
-[ext_resource type="Script" uid="uid://dlfniosu34mqi" path="res://source/componentes/items/item_libro.gd" id="1_26e17"]
+[ext_resource type="Script" path="res://source/componentes/items/item_libro.gd" id="1_26e17"]
 [ext_resource type="Texture2D" uid="uid://x5qdy2xcd4i0" path="res://source/componentes/items/libroEcuaciones.png" id="2_k7op3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6251g"]
