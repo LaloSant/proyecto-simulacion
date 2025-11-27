@@ -21,9 +21,13 @@ func salva_partida():
 		"escenaActual": GLOBAL.escena_actual,
 		"nombre": GLOBAL.pers_nombre,
 		"pliego": GLOBAL.pliego,
-		"naranjas":GLOBAL.naranjas,
+		"entrega_pliego": GLOBAL.entrega_pliego,
+		"libros":GLOBAL.libros,
 		"torta":GLOBAL.torta,
-		"otorgar_naranjas":GLOBAL.otorgar_naranjas
+		"otorgar_libro":GLOBAL.otorgar_libro,
+		"tienePaginas":GLOBAL.tienePaginas,
+		"habla_ocayo":GLOBAL.habla_ocayo,
+		"habla_alexis":GLOBAL.habla_alexis
 	}
 	var jsonString = JSON.stringify(datos)
 	if !FileAccess.file_exists(file_path):
@@ -42,9 +46,11 @@ func carga_partida():
 	GLOBAL.pers_salud = datos.salud
 	GLOBAL.pers_tieneLampara =datos.pers_tieneLampara
 	GLOBAL.pliego = datos.pliego
-	GLOBAL.naranjas = datos.naranjas
+	GLOBAL.entrega_pliego = datos.entrega_pliego
+	GLOBAL.libros = datos.libros
 	GLOBAL.torta = datos.torta
-	GLOBAL.otorgar_naranjas = datos.otorgar_naranjas
+	GLOBAL.otorgar_libro = datos.otorgar_libro
+	GLOBAL.tienePaginas = datos.tienePaginas
 	var contador:int = 0
 	for pag in datos.paginas:
 		GLOBAL.paginas.set(contador, pag)
@@ -54,6 +60,8 @@ func carga_partida():
 	GLOBAL.marker_actual = datos.markerActual
 	GLOBAL.escena_actual = datos.escenaActual
 	GLOBAL.pers_nombre = datos.nombre
+	GLOBAL.habla_alexis = datos.habla_alexis
+	GLOBAL.habla_ocayo = datos.habla_ocayo
 
 func elimina_partida():
 	if FileAccess.file_exists(file_path):

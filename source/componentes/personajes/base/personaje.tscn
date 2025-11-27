@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://ciyad5p3oge3u"]
 
 [ext_resource type="Script" uid="uid://cxh0wtsp3wd65" path="res://source/componentes/personajes/base/personaje.gd" id="1_pkvuc"]
-[ext_resource type="SpriteFrames" uid="uid://kag7yirkasv3" path="res://source/componentes/personajes/alan/alanSprites.tres" id="2_i4ev6"]
+[ext_resource type="SpriteFrames" uid="uid://kag7yirkasv3" path="res://source/componentes/personajes/alan/alanSpritesNew.tres" id="2_i4ev6"]
 [ext_resource type="PackedScene" uid="uid://d0a4ucxe160yd" path="res://source/screens/juego/HUD/hud.tscn" id="3_i4ev6"]
 [ext_resource type="PackedScene" uid="uid://b7jlar0npikkx" path="res://source/componentes/cajas/hit_box.tscn" id="4_seih6"]
 [ext_resource type="PackedScene" uid="uid://d3e7cljx2pkqk" path="res://source/screens/juego/HUD/pant_pausa.tscn" id="4_xk7y5"]
@@ -108,10 +108,8 @@ bus = &"SFX"
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(3, 3)
 sprite_frames = ExtResource("2_i4ev6")
-animation = &"muerte"
-autoplay = "idle_abj"
-frame = 25
-frame_progress = 1.0
+animation = &"idle_hor"
+autoplay = "idle_hor"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
 visible = false
@@ -130,6 +128,7 @@ occluder = SubResource("OccluderPolygon2D_cemx0")
 occluder_light_mask = 2
 
 [node name="Linterna" type="PointLight2D" parent="."]
+visible = false
 position = Vector2(2, 1)
 scale = Vector2(6.30664, 6.30664)
 color = Color(1, 0.956863, 0.772549, 1)

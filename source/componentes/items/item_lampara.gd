@@ -7,6 +7,7 @@
 '''
 
 class_name itemLampara extends Area2D
+
 signal item_obtenido
 
 func _on_body_entered(body: Node2D) -> void:

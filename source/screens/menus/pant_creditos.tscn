@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dquhxwhrmnp7e"]
 
 [ext_resource type="Script" uid="uid://cmukdfuqprdg8" path="res://source/screens/menus/pant_creditos.gd" id="1_lkht7"]
-[ext_resource type="VideoStream" uid="uid://b8q0xpnf81yr4" path="res://resources/videos/CreditosFNAH.ogv" id="2_e1aw4"]
+[ext_resource type="VideoStream" uid="uid://c5xnulcsavlx5" path="res://resources/videos/creditos.ogv" id="2_e1aw4"]
 [ext_resource type="PackedScene" uid="uid://rerxv8lts2mu" path="res://source/componentes/btn_a_menu_prin.tscn" id="3_dqu32"]
 
 [node name="PantCreditos" type="Node2D"]
@@ -12,18 +12,23 @@ offset_right = 1280.0
 offset_bottom = 720.0
 
 [node name="ColorRect" type="ColorRect" parent="Panel"]
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Panel"]
-layout_mode = 0
-offset_left = 15.0
-offset_top = 4.0
-offset_right = 1935.0
-offset_bottom = 1092.0
-scale = Vector2(0.65, 0.65)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
 stream = ExtResource("2_e1aw4")
 autoplay = true
 bus = &"Musica"

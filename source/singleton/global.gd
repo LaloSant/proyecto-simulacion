@@ -21,23 +21,31 @@ enum MarkerPosicion{mk_EdificioAmbSalon, mk_EdificioAmbEntrada, mk_EdificioAmbFu
 @onready var controles_tactiles:bool = OS.get_name() == 'Android'
 
 #Seccion personaje
+var jugador:Personaje_2
+var pers_default_name #
 var pers_default_speed:int
 var pers_factorSneak:float 
 var pers_factorRun:float 
-var pers_nombre:String
-var enem_tipo:String
 var pers_salud:int
 
+var pers_nombre:String
+var enem_tipo:String
+
 #Seccion partida
-var naranjas:bool
+var libros:bool
 var torta:bool
-var otorgar_naranjas:bool
+var habla_alexis:bool=false
+var otorgar_libro:bool
 var pliego:bool
+var entrega_pliego:bool
 var pers_tieneLampara:bool
 var contador_dia:int
 var marker_actual = MarkerPosicion.mk_EdificioTSalon
 var escena_actual = ""
+var habla_ocayo:bool=false
 var paginas:Array[bool] = [false, false, false, false, false, false, false, false]
+var numPaginas:int=0
+var tienePaginas:bool=false
 var saleT:bool = false
 
 #Seccion audio
@@ -45,6 +53,8 @@ var nivelAudioMaster:float
 var nivelAudioMusica:float
 var nivelAudioSFX:float
 var nivelAudioVoz:float
+
+var file_path = "user://gamsesave.json" if OS.get_name() == "Android" or OS.get_name()== "macOS" else "res://gamesave.json"
 
 func _ready() -> void:
 	#Carga de idioma activo
@@ -65,7 +75,6 @@ func _ready() -> void:
 	nivelAudioMusica = audio_settings.musica
 	nivelAudioSFX = audio_settings.sfx
 	nivelAudioVoz = audio_settings.voz
-	
 
 ## Guarda datos importantes de la partida
 func guardarPartida() -> void:

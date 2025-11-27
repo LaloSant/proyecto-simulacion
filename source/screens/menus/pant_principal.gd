@@ -9,19 +9,21 @@
 extends Node2D
 
 func _ready() -> void:
-	$Panel/VBoxContainer/btn_iniciar.grab_focus()
-	$Panel/VBoxContainer/btn_continuar.disabled = !SAVEFILE.existe_partida()
+	$VBoxContainer/btn_iniciar.grab_focus()
+	$VBoxContainer/btn_continuar.disabled = !SAVEFILE.existe_partida()
 	THR_LOADER.load_trigger("res://source/screens/menus/pant_creditos.tscn")
 
 func _on_btn_iniciar_pressed() -> void:
 	GLOBAL.continuar_partida = false
 	GLOBAL.marker_actual = GLOBAL.MarkerPosicion.mk_EdificioTSalon
-	GLOBAL.naranjas = false
-	GLOBAL.otorgar_naranjas = false
+	GLOBAL.libros = false
+	GLOBAL.otorgar_libro = false
 	GLOBAL.torta = false
 	GLOBAL.saleT = false
 	GLOBAL.pliego = false
 	GLOBAL.paginas = [false, false, false, false, false, false, false, false]
+	GLOBAL.habla_alexis=false
+	GLOBAL.habla_ocayo= false
 	SCN_FADE_IN.cambia_escena("res://source/screens/juego/edifT/edificio_t.tscn")
 
 func _on_btn_continuar_pressed() -> void:
@@ -37,5 +39,5 @@ func _on_btn_creditos_pressed() -> void:
 func _on_btn_salir_pressed() -> void:
 	get_tree().quit()
 	
-func _on_timer_video_intro_timeout() -> void:
-	SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_video_intro.tscn")
+#func _on_timer_video_intro_timeout() -> void:
+	#SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_video_intro.tscn")

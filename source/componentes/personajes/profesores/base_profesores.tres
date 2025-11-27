@@ -1,0 +1,75 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dxqilmgvv1ase"]
+
+[ext_resource type="Texture2D" uid="uid://duin4ngqksrtd" path="res://source/componentes/personajes/profesores/baseProfesores.png" id="1_tnxjk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_540yd"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjwen"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m4u8"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yarbd"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ef4i2"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbh28"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psdgg"]
+atlas = ExtResource("1_tnxjk")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_540yd")
+}],
+"loop": false,
+"name": &"idle_hor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjwen")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m4u8")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yarbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ef4i2")
+}],
+"loop": true,
+"name": &"walk_hor",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbh28")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psdgg")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 3.0
+}]

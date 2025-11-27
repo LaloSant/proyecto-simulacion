@@ -1,18 +1,16 @@
-[gd_scene load_steps=21 format=4 uid="uid://b5hj1agndq0u6"]
+[gd_scene load_steps=18 format=4 uid="uid://b5hj1agndq0u6"]
 
 [ext_resource type="PackedScene" uid="uid://ciyad5p3oge3u" path="res://source/componentes/personajes/base/personaje.tscn" id="1_ghekp"]
 [ext_resource type="Script" uid="uid://bcokrb4kb46j" path="res://source/screens/juego/edifT/edificio_t.gd" id="1_i38r3"]
-[ext_resource type="AudioStream" uid="uid://cblj3wxb5ean2" path="res://resources/audio/musica/LuigiMansion.mp3" id="2_tjhh6"]
+[ext_resource type="AudioStream" uid="uid://dng36jroxnora" path="res://resources/audio/musica/Never Let Me Down Again.mp3" id="2_a7uyv"]
 [ext_resource type="TileSet" uid="uid://buyircn635ffw" path="res://source/screens/juego/edifT/edificio_tTileSet.tres" id="3_ytj8a"]
 [ext_resource type="PackedScene" uid="uid://bna2yasfy1opo" path="res://source/componentes/tps/transportador.tscn" id="5_pf4qd"]
 [ext_resource type="PackedScene" uid="uid://dfphplmv1hblj" path="res://source/singleton/transiciones/transicion.tscn" id="6_sr0qs"]
-[ext_resource type="PackedScene" uid="uid://lmhgy8eugrgv" path="res://source/componentes/items/item_lampara.tscn" id="7_gm1lj"]
 [ext_resource type="PackedScene" uid="uid://c8hbcu3tjoig" path="res://source/screens/juego/HUD/dialog_window.tscn" id="8_63xdy"]
-[ext_resource type="PackedScene" uid="uid://bddno62kg4il7" path="res://source/componentes/personajes/enemigos/enemigo_base.tscn" id="8_tjhh6"]
-[ext_resource type="AudioStream" uid="uid://cyox8ywkadgcp" path="res://resources/audio/gowMisterio.mp3" id="9_tjhh6"]
+[ext_resource type="AudioStream" uid="uid://ciwlm51m8j6q8" path="res://resources/audio/ocayo.mp3" id="10_fcnty"]
 [ext_resource type="Texture2D" uid="uid://dhbff6obm5b38" path="res://resources/images/sprites/ocayo/ocayo2.png" id="11_fcnty"]
+[ext_resource type="AudioStream" uid="uid://bhkb04ske57ww" path="res://resources/audio/thank you.mp3" id="11_qs5lx"]
 [ext_resource type="Texture2D" uid="uid://cnd4bspsdi2hk" path="res://resources/images/sprites/ocayo/ocayo.png" id="12_qs5lx"]
-[ext_resource type="AudioStream" uid="uid://g4un81y5ly6g" path="res://resources/audio/chavo-a-valer-el-semestre.mp3" id="13_qs5lx"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_tjhh6"]
 cull_mode = 2
@@ -23,12 +21,6 @@ polygon = PackedVector2Array(-520, 536, -328, 536, -328, 640, -216, 640, -216, 5
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_fcnty"]
 polygon = PackedVector2Array(-512, -48, -320, -48, -320, -64, -288, -64, -288, -16, -256, -16, -256, -64, -224, -64, -224, -48, 320, -56, 320, 80, -192, 80, -192, 160, -352, 160, -352, 80, -512, 80, -512, -8, -520, -8, -520, 184, 344, 184, 344, -72, -528, -80, -512, -16)
-
-[sub_resource type="Curve2D" id="Curve2D_63xdy"]
-_data = {
-"points": PackedVector2Array(-0.138687, 0, 0.138687, 0, -320, 0, 0, 0, 0, 0, 286, 1, 0, 0, 0, 0, 285, 65, 0, 0, 0, 0, -336, 65, 0, 0, 0, 0, -448, 64, 0, 0, 0, 0, -448, 0, 0, 0, 0, 0, -320, 0)
-}
-point_count = 7
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_alr8s"]
 animations = [{
@@ -53,12 +45,13 @@ y_sort_enabled = true
 script = ExtResource("1_i38r3")
 
 [node name="Musica" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_tjhh6")
+stream = ExtResource("2_a7uyv")
 autoplay = true
 bus = &"Musica"
 parameters/looping = true
 
 [node name="Luz" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.0605303, 0.0605303, 0.0605303, 1)
 
 [node name="Fondo" type="ColorRect" parent="."]
@@ -157,25 +150,6 @@ occluder = SubResource("OccluderPolygon2D_a7uyv")
 [node name="P1" type="LightOccluder2D" parent="Sombras"]
 occluder = SubResource("OccluderPolygon2D_fcnty")
 
-[node name="Enemigos" type="Node" parent="."]
-
-[node name="GuardianP" parent="Enemigos" instance=ExtResource("8_tjhh6")]
-position = Vector2(-320, 0)
-rotation = -0.0102037
-
-[node name="Rutas" type="Node" parent="."]
-
-[node name="RtaPasillo" type="Path2D" parent="Rutas"]
-curve = SubResource("Curve2D_63xdy")
-
-[node name="RtaFPasillo" type="PathFollow2D" parent="Rutas/RtaPasillo"]
-position = Vector2(-320, 0)
-rotation = -0.0102037
-rotates = false
-
-[node name="RtfPasillo" type="RemoteTransform2D" parent="Rutas/RtaPasillo/RtaFPasillo"]
-remote_path = NodePath("../../../../Enemigos/GuardianP")
-
 [node name="Hitboxes" type="Node" parent="."]
 
 [node name="HitboxSalon" type="StaticBody2D" parent="Hitboxes"]
@@ -232,19 +206,6 @@ destino = NodePath("../Pb_P1Dest")
 [node name="Pb_P1Dest" type="Marker2D" parent="TpNuevo"]
 position = Vector2(-304, -22)
 
-[node name="Items" type="Node" parent="."]
-
-[node name="item_lampara" parent="Items" instance=ExtResource("7_gm1lj")]
-position = Vector2(960, 56)
-scale = Vector2(0.7, 0.7)
-
-[node name="DWLampara" parent="Items" instance=ExtResource("8_63xdy")]
-texto = "Obtuviste lampara. Presiona \"q\" o boton \"X\"."
-
-[node name="DWNeedLampara" parent="Items" instance=ExtResource("8_63xdy")]
-texto = "Deberia buscar una lampara."
-sound = ExtResource("9_tjhh6")
-
 [node name="Transicion" parent="." instance=ExtResource("6_sr0qs")]
 position = Vector2(-272, 585)
 escena = "res://source/screens/juego/mundo/mundo.tscn"
@@ -263,8 +224,14 @@ frame_progress = 0.852199
 shape = SubResource("RectangleShape2D_tjhh6")
 
 [node name="DWOcayo" parent="." instance=ExtResource("8_63xdy")]
-texto = "chAvo, va a valer vrg el semestre"
-sound = ExtResource("13_qs5lx")
+persona = "Prof. Octavio Urbina"
+texto = "chAvo, necesito tu ayuda para recuperar 8 examenes que olvide en ambiental"
+sound = ExtResource("10_fcnty")
+
+[node name="DWOcayoThanks" parent="." instance=ExtResource("8_63xdy")]
+persona = "Prof. Octavio Urbina"
+texto = "Muchas gracias, por poco me corren"
+sound = ExtResource("11_qs5lx")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(751, -95)
@@ -279,5 +246,4 @@ shape = SubResource("RectangleShape2D_qs5lx")
 [connection signal="cambio_lugar" from="TpNuevo/P1_SalonTp" to="." method="_on_p_1_salon_tp_cambio_lugar"]
 [connection signal="cambio_lugar" from="TpNuevo/P1_PbTp" to="." method="_on_p_1_pb_tp_cambio_lugar"]
 [connection signal="cambio_lugar" from="TpNuevo/Pb_P1Tp" to="." method="_on_pb_p_1_tp_cambio_lugar"]
-[connection signal="item_obtenido" from="Items/item_lampara" to="." method="_on_item_lampara_item_obtenido"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

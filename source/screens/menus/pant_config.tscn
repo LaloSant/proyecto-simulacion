@@ -6,7 +6,7 @@
 
 [sub_resource type="Gradient" id="Gradient_wagfi"]
 offsets = PackedFloat32Array(0.0324675, 1)
-colors = PackedColorArray(0.445626, 0.0175171, 0.104678, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0, 0.23688361, 0.5480026, 1, 0.61196744, 0.23472223, 0.05888676, 1)
 metadata/_snap_enabled = true
 metadata/_snap_count = 11
 

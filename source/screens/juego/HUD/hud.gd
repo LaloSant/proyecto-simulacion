@@ -32,17 +32,29 @@ func mostrarMisiones():
 	$PanelMisiones.visible = !$PanelMisiones.visible
 
 func consultarMisiones():
-	$PanelMisiones/TickNaranjas.visible = GLOBAL.otorgar_naranjas
-	$PanelMisiones/TickPliego.visible = GLOBAL.pliego
+	$PanelMisiones/TickNaranjas.visible = GLOBAL.otorgar_libro
+	$PanelMisiones/TickPliego.visible = GLOBAL.entrega_pliego
+	if !GLOBAL.habla_ocayo:
+		$PanelMisiones/lblMisionPaginas.text="lblHablaOcayo"
+		$PanelMisiones/lblNumPaginas.visible=false
+	else:
+		$PanelMisiones/lblMisionPaginas.text="lblMisionPaginas"
+		$PanelMisiones/lblNumPaginas.visible=true
+	if !GLOBAL.habla_alexis:
+		$PanelMisiones/lblMisionLibro.text="lblHablaAlexis"
+	else:
+		$PanelMisiones/lblMisionLibro.text="lblMisionLibro"
+	if GLOBAL.pliego:
+		$PanelMisiones/lblMisionPliego.text = "lblMisionPliego2"
 	setNumPaginas()
 
 func setNumPaginas():
-	var numPaginas = 0
+	var numPagLocales =0
 	for tienePagina in GLOBAL.paginas:
 		if tienePagina:
-			numPaginas += 1
-	$PanelMisiones/lblNumPaginas.text = str(numPaginas) + " / 8"
-	if numPaginas == 8:
+			numPagLocales += 1
+	$PanelMisiones/lblNumPaginas.text = str(numPagLocales) + " / 8"
+	if GLOBAL.tienePaginas:
 		$PanelMisiones/TickPaginas.visible = true
 
 func cambioTorta(valor:bool) -> void:

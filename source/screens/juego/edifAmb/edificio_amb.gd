@@ -16,11 +16,11 @@ func _ready() -> void:
 		$Items/DWNeedPaginas.mostrar_dialogo($Personaje)
 	$Personaje/HUD/lblInfo.text = "lbl_Salon"
 	$Personaje.defaultSpeed = $Personaje.defaultSpeed * 0.65
-	$Personaje/Linterna.visible = $Personaje.tieneLampara
+	
 	match GLOBAL.marker_actual:
 		GLOBAL.MarkerPosicion.mk_EdificioAmbEntrada:
 			$Personaje.position = $TpNuevo/Entrada.position
-	$Items/item_lampara.visible = !GLOBAL.pers_tieneLampara
+	
 	$Enemigos/GuardianP.speed *= 0.8
 	$Enemigos/GuardianP2.speed *= 0.8
 	$Enemigos/GuardianSalon.speed *= 0.8
@@ -36,10 +36,7 @@ func _process(delta: float) -> void:
 	$Enemigos/GuardianSalon3.actualizarPosChase(delta)
 	$Enemigos/GuardianSalon4.actualizarPosChase(delta)
 
-func _on_item_lampara_item_obtenido() -> void:
-	$Items/DWLampara.mostrar_dialogo($Personaje)
-	GLOBAL.pers_tieneLampara = true
-	$Personaje.tieneLampara = true
+
 
 func _on_personaje_fin_muerte() -> void:
 	$Musica.playing= false

@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://db7k8sr37qptx"]
+
+[ext_resource type="Texture2D" uid="uid://7lt82la8efjl" path="res://source/componentes/personajes/profesores/tilemap.png" id="1_mqkk8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtiak"]
+atlas = ExtResource("1_mqkk8")
+region = Rect2(391, 204, 16, 17)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtiak")
+}],
+"loop": false,
+"name": &"idle_hor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtiak")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtiak")
+}],
+"loop": true,
+"name": &"walk_hor",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtiak")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 3.0
+}]

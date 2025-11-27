@@ -15,7 +15,7 @@ signal finMuerte
 @export var pliego: bool = GLOBAL.pliego
 @export var tieneLampara:bool = GLOBAL.pers_tieneLampara
 @export var paginas:Array[bool] = GLOBAL.paginas
-@export var naranjas:bool= GLOBAL.naranjas
+@export var libros:bool= GLOBAL.libros
 @export var torta:bool=GLOBAL.torta
 #Propiedades
 var lastAnimation = "idle_abj"
@@ -45,7 +45,7 @@ func _ready() -> void:
 		paginas = GLOBAL.paginas
 		tieneLampara = GLOBAL.pers_tieneLampara
 		pliego = GLOBAL.pliego
-		naranjas = GLOBAL.naranjas
+		libros = GLOBAL.libros
 		torta = GLOBAL.torta
 	else:
 		GLOBAL.pers_nombre = nombre
@@ -55,7 +55,7 @@ func _ready() -> void:
 		GLOBAL.paginas = paginas
 		tieneLampara = false
 		pliego= false
-		naranjas=false
+		libros=false
 		torta=false
 		GLOBAL.pers_tieneLampara = tieneLampara
 		GLOBAL.continuar_partida = true
@@ -159,7 +159,7 @@ func recibe_danio(danio:int, desdeX:int, desdeY:int) -> void:
 		muerto = true
 		setPuedeMoverse(false)
 		reproduceSonido("Muerte")
-		cambiar_animacion("muerte")
+		cambiar_animacion("death")
 	$HUD.actualizar_salud(salud)
 	if velocity == Vector2.ZERO:
 		velocity.x = defaultSpeed * desdeX
@@ -189,7 +189,7 @@ func has_pliego() -> bool:
 	return pliego
 	
 func has_naranjas() -> bool:
-	return naranjas
+	return libros
 	
 func has_torta()-> bool:
 	return torta

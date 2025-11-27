@@ -1,0 +1,147 @@
+[gd_scene load_steps=14 format=3 uid="uid://dd04ygqnfvxju"]
+
+[ext_resource type="Script" uid="uid://04gsy4ny3345" path="res://source/componentes/personajes/base/personaje_2_0.gd" id="1_n17xa"]
+[ext_resource type="SpriteFrames" uid="uid://kag7yirkasv3" path="res://source/componentes/personajes/alan/alanSpritesNew.tres" id="2_lyya3"]
+[ext_resource type="PackedScene" uid="uid://d0a4ucxe160yd" path="res://source/screens/juego/HUD/hud.tscn" id="3_dycxm"]
+[ext_resource type="PackedScene" uid="uid://d3e7cljx2pkqk" path="res://source/screens/juego/HUD/pant_pausa.tscn" id="4_0wrrt"]
+[ext_resource type="PackedScene" uid="uid://copq1rd75ls0h" path="res://source/screens/juego/HUD/CapaTactil.tscn" id="5_em6n0"]
+[ext_resource type="PackedScene" uid="uid://bfsrljp1wrpa3" path="res://source/screens/juego/HUD/game_over.tscn" id="6_ax65j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdach"]
+size = Vector2(12, 12.25)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cemx0"]
+cull_mode = 1
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 5, 15, 5, 15, 15, 10, 15, 10, 22.5, -10, 22.5, -10, 15, -15, 15, -15, 5, -10, 5)
+
+[sub_resource type="Gradient" id="Gradient_i4ev6"]
+offsets = PackedFloat32Array(0, 0.656051)
+colors = PackedColorArray(0.446777, 0.446777, 0.446777, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2cc2v"]
+gradient = SubResource("Gradient_i4ev6")
+fill = 1
+fill_from = Vector2(0.493213, 0.502262)
+fill_to = Vector2(0, 0)
+
+[sub_resource type="Animation" id="Animation_xk7y5"]
+resource_name = "Muerte"
+length = 10.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3.7, 3.7), Vector2(8, 8)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.03333, 6.6, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.785398, 0.0, -0.785398]
+}
+
+[sub_resource type="Animation" id="Animation_0yiej"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Camera:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.7, 3.7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Camera:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0yiej"]
+_data = {
+&"Muerte": SubResource("Animation_xk7y5"),
+&"RESET": SubResource("Animation_0yiej")
+}
+
+[node name="Personaje2_0" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 5
+motion_mode = 1
+slide_on_ceiling = false
+platform_floor_layers = 4294967040
+platform_wall_layers = 1
+script = ExtResource("1_n17xa")
+character_name = "Yael"
+
+[node name="AnSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_lyya3")
+animation = &"idle_hor"
+autoplay = "idle_down"
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vdach")
+debug_color = Color(0.234351, 0.607851, 0.669646, 0.376471)
+
+[node name="LightOc" type="LightOccluder2D" parent="."]
+visible = false
+occluder = SubResource("OccluderPolygon2D_cemx0")
+occluder_light_mask = 2
+
+[node name="Lantern" type="PointLight2D" parent="."]
+visible = false
+scale = Vector2(6.30664, 6.30664)
+color = Color(1, 0.956863, 0.772549, 1)
+energy = 1.3
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_2cc2v")
+texture_scale = 1.5
+
+[node name="Ears" type="AudioListener2D" parent="."]
+
+[node name="Camera" type="Camera2D" parent="."]
+scale = Vector2(0.5, 0.5)
+ignore_rotation = false
+zoom = Vector2(3.7, 3.7)
+
+[node name="HUD" parent="." instance=ExtResource("3_dycxm")]
+
+[node name="pantPausa" parent="HUD" instance=ExtResource("4_0wrrt")]
+
+[node name="CapaTactil" parent="HUD" instance=ExtResource("5_em6n0")]
+
+[node name="GameOver" parent="HUD" instance=ExtResource("6_ax65j")]
+layer = 5
+visible = false
+
+[node name="ANPPers" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0yiej")
+}
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+volume_db = 2.0
+max_polyphony = 5
+bus = &"SFX"

@@ -2,22 +2,22 @@ id,es,en,fr
 btn_iniciar,Nueva partida,New  Game,Nouveau jeu
 btn_continuar,Continuar partida,Continue ,Continuer le jeu
 btn_salir,Salir del Juego,Exit Game,Jeu de sortie
-btn_config,Configuracion,Settings,Paramètres
+btn_config,Configuracion,Settings,Paramï¿½tres
 btn_pant_principal,Pantalla principal,Main menu,Menu principal
 btn_idioma,Cambiar Idioma,Change Language,Changer de langue
 btn_eliminar_part,Eliminar guardado,Erase save,Effacer la sauvegarde
 btn_guardar,Guardar,Save,Saveguarder
 btn_AMenuPrin,Ir a menu,Go to menu,Aller au menu
-btn_creditos,Creditos,Credits,Crédits
+btn_creditos,Creditos,Credits,Crï¿½dits
 btn_start,Empezar,Start,Commencer
 btn_controlesAct,Activos,Actives,Activees
 btn_controlesDes,Desactivados,Deactivated,Non activees
 btn_A_Pant_Intro,Saltar,Skip,Sautiller
-lbl_titulo,Cinco noches en Hugo,Five Nights at Hugo's,Cinq nuits chez Hugo
-lbl_idioma,Espanol,English,Français
+lbl_titulo,ExploraTEC, ExploraTEC, ExploraTEC
+lbl_idioma,Espanol,English,Franï¿½ais
 lbl_Salon,Salon,Classroom,Classe
-lbl_P1,Piso 1,Floor 1,Étage 1
-lbl_Pb,Planta baja,Ground floor,Rez-de-chaussée
+lbl_P1,Piso 1,Floor 1,ï¿½tage 1
+lbl_Pb,Planta baja,Ground floor,Rez-de-chaussï¿½e
 lbl_dia1,Dia uno,Day one,Jour un
 lbl_dia2,Dia dos,Day two,Jour deux
 lbl_dia3,Dia tres,Day three,Jour trois
@@ -26,10 +26,16 @@ lbl_master,Audio: maestro,Audio: Master,Audio: Master
 lbl_musica,Audio: Musica,Audio: Music,Audio: Musique
 lbl_sfx,Audio: SFX,Audio: SFX,Audio: SFX
 lbl_voz,Audio: Voz,Audio: voice,Audio: voix
-lbl_gameover,Fin de la partida,Game Over,Jeu Terminé
+lbl_gameover,Fin de la partida,Game Over,Jeu Terminï¿½
 lbl_controles,Controles tactiles,Tactile controls,Controles tactiles
 lblMisiones,Misiones,Mission,Mission
-lblMisionPaginas,Paginas del diario (Amb.),Pages of diary (Amb),Pages du journal (Amb)
-lblMisionPliego, Pliego petitorio (Cristal),Petition document (Crystal),Document de pétition (Verre)
-lblMisionNaranjas,Entregar narajnas (Meca),Deliver oranges (Meca),Livrer des oranges (Meca)
-,,,
+lblMisionPaginas,Paginas del examen (Amb.),Pages of test (Amb),Pages du examen (Amb)
+lblMisionPliego,Recoger documento (Edif. Cristal),Pick Document (Building Crystal),Retrieve document (Building Crystal)
+lblMisionPliego2,Entregar reconocimiento (Centro de computo),Deliver award (Computer center),Livrer le document (Centre informatique)
+lblMisionLibro,Entregar libro (Meca),Deliver book (Meca),Remettez le livre (Meca)
+lblPensRecon,Algo se me habia encargado... debo explorar.,I had been assigned something... I must explore.,On m'avait confiï¿½ quelque chose... je dois explorer.
+lblRecojeReco,Es cierto! Me encargaron darselo a alguien en el Centro de computo,Oh right! I must give this to someone in the computer center,C'est vrai ! On m'a demandï¿½ de le donner ï¿½ quelqu'un au centre informatique.
+lblPensando,Pensando,Thinking,Pensant
+lblEntregaRecon,Gracias por entregarme mi reconocimiento!,Thank you for giving me my award!,Merci de mï¿½avoir remis ma rï¿½compense !
+lblHablaOcayo,Habla con el profe Octavio(T),Speak with prof Octavio(T),Parlez au professeur Octavio(T)
+lblHablaAlexis,Habla con el profe Alexis(Meca),Speak with prof Alexis(Meca),Parlez au professeur Alexis(Meca)

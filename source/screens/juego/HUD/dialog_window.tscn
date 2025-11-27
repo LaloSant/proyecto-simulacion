@@ -12,7 +12,7 @@ tiempo = 4
 
 [node name="PnlTexto" type="Panel" parent="."]
 offset_top = 528.0
-offset_right = 1280.0
+offset_right = 1150.0
 offset_bottom = 628.0
 
 [node name="lbl_texto" type="Label" parent="PnlTexto"]
@@ -21,8 +21,8 @@ anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -156.0
-offset_right = 156.0
+offset_left = -633.0
+offset_right = 571.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_lf66c")
@@ -30,6 +30,7 @@ theme_override_font_sizes/font_size = 40
 text = "lbl_textoPnl1"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="Timer1" type="Timer" parent="."]
 wait_time = 3.0
@@ -40,6 +41,30 @@ one_shot = true
 [node name="Timer2" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="PnlTexto2" type="Panel" parent="."]
+offset_left = 2.0
+offset_top = 474.0
+offset_right = 348.0
+offset_bottom = 527.0
+
+[node name="lbl_persona" type="Label" parent="PnlTexto2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -151.0
+offset_top = 3.0
+offset_right = 161.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_lf66c")
+theme_override_font_sizes/font_size = 20
+text = "lbl_textoPnl2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="timeout" from="Timer1" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_timer_2_timeout"]

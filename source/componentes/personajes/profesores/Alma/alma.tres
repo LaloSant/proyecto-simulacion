@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://bwckyiedx0j2l"]
+
+[ext_resource type="Texture2D" uid="uid://bjr6r4w20yq3v" path="res://source/componentes/personajes/profesores/Alma/profeAlma.png" id="1_wxfqy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yyv1"]
+atlas = ExtResource("1_wxfqy")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h46ku"]
+atlas = ExtResource("1_wxfqy")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm056"]
+atlas = ExtResource("1_wxfqy")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4bmi"]
+atlas = ExtResource("1_wxfqy")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnddr"]
+atlas = ExtResource("1_wxfqy")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alikm"]
+atlas = ExtResource("1_wxfqy")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yyv1")
+}],
+"loop": false,
+"name": &"idle_hor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h46ku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm056")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yyv1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4bmi")
+}],
+"loop": true,
+"name": &"walk_hor",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnddr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alikm")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 3.0
+}]
