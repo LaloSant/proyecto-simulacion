@@ -91,11 +91,9 @@ func _on_area_body_entered(body: Node2D) -> void:
 			$NPCs/NPC4/DWEntregaDoc.mostrar_dialogo(body)
 			GLOBAL.entrega_pliego = true
 
-
 func _on_tc_edif_meca_body_entered(body: Node2D) -> void:
 	if body is Personaje or body is Personaje_2:
 		GLOBAL.marker_actual = GLOBAL.MarkerPosicion.mk_EdificioMecaEntrada
-
 
 func _on_tc_edif_x_body_entered(body: Node2D) -> void:
 	if GLOBAL.habla_alexis:

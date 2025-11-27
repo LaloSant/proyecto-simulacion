@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://iv2pqlgv8jrq" path="res://resources/images/nubes1.png" id="6_avx6v"]
 [ext_resource type="Script" uid="uid://bnst3tf0ssw18" path="res://source/screens/menus/parallax_layer_2.gd" id="7_avx6v"]
 [ext_resource type="Texture2D" uid="uid://disa8ibyntans" path="res://resources/images/tec.png" id="7_xyw32"]
-[ext_resource type="Texture2D" uid="uid://bglrq8x8o63bj" path="res://resources/images/arboles.png" id="9_xyw32"]
+[ext_resource type="Texture2D" uid="uid://ce86mmlolytjp" path="res://resources/images/arboles.png" id="9_xyw32"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xyw32"]
 bg_color = Color(0, 0, 0, 0.64705884)

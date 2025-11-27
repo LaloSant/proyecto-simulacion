@@ -13,8 +13,8 @@ config_version=5
 config/name="ITTOL SIMUL"
 run/main_scene="res://source/screens/menus/pant_intro.tscn"
 config/features=PackedStringArray("4.5", "Mobile")
-boot_splash/image="res://resources/images/holaPeter.png"
-config/icon="res://resources/images/FNAH.png"
+boot_splash/image="uid://dp4h37wef8cuy"
+config/icon="uid://cb2e7x5ea23ph"
 
 [autoload]
 
@@ -34,10 +34,6 @@ shapes/collision/shape_color=Color(0.662745, 0.682353, 0.192157, 0.65098)
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/ridiculous_coding/plugin.cfg")
 
 [global_group]
 

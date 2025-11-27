@@ -15,18 +15,11 @@ var current_anim:String
 
 func _ready() -> void:
 	set_sprite()
+	self.speed = randi_range(60, 100)
 	if !markers_aleatorios == null:
 		for marker in markers_aleatorios.get_children():
 			marcadores.append(marker)
 		actualizar_objetivo()
-
-func _process(delta: float) -> void:
-	if !puede_moverse:
-		return
-	if marker_a_seguir == null:
-		#ruta_follow.progress += speed * delta
-		#actualizar_anim()
-		pass
 
 func _physics_process(_delta: float) -> void:
 	if !puede_moverse:

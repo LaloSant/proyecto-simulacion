@@ -216,32 +216,36 @@ position = Vector2(-22, 34)
 y_sort_enabled = true
 
 [node name="Profesor" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-103, -65)
+position = Vector2(-1447, 284)
 ruta_follow = NodePath("../Rutas/Ruta1/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="Profesor2" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(671, 51)
 character_name = "Maribel"
 ruta_follow = NodePath("../Rutas/Ruta2/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="Profesor3" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(288, -3294)
 character_name = "Mauro"
 ruta_follow = NodePath("../Rutas/Ruta2/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="NPC1" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(288, -3294)
 character_name = "NPC1"
 ruta_follow = NodePath("../Rutas/Ruta4/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="NPC2" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
+position = Vector2(847, -1039)
 character_name = "NPC2"
 ruta_follow = NodePath("../Rutas/Ruta5/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
 
 [node name="NPC3" parent="NPCs" node_paths=PackedStringArray("ruta_follow", "markers_aleatorios") instance=ExtResource("5_04pcm")]
-position = Vector2(-29, -46)
+position = Vector2(-18, 1915)
 character_name = "NPC3"
 ruta_follow = NodePath("../Rutas/Ruta6/RutaFollow")
 markers_aleatorios = NodePath("../../Marcadores")
@@ -271,7 +275,7 @@ position = Vector2(-1, 0)
 rotates = false
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta1/RutaFollow"]
-position = Vector2(-67, -65)
+position = Vector2(-1411, 284)
 remote_path = NodePath("../../../../Profesor")
 
 [node name="Ruta2" type="Path2D" parent="NPCs/Rutas"]
@@ -280,6 +284,7 @@ curve = SubResource("Curve2D_8v40e")
 [node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta2"]
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta2/RutaFollow"]
+position = Vector2(671, 51)
 remote_path = NodePath("../../../../Profesor2")
 
 [node name="Ruta3" type="Path2D" parent="NPCs/Rutas"]
@@ -288,6 +293,7 @@ curve = SubResource("Curve2D_8v40e")
 [node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta3"]
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta3/RutaFollow"]
+position = Vector2(288, -3294)
 remote_path = NodePath("../../../../Profesor3")
 
 [node name="Ruta4" type="Path2D" parent="NPCs/Rutas"]
@@ -296,6 +302,7 @@ curve = SubResource("Curve2D_8v40e")
 [node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta4"]
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta4/RutaFollow"]
+position = Vector2(288, -3294)
 remote_path = NodePath("../../../../NPC1")
 
 [node name="Ruta5" type="Path2D" parent="NPCs/Rutas"]
@@ -304,6 +311,7 @@ curve = SubResource("Curve2D_8v40e")
 [node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta5"]
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta5/RutaFollow"]
+position = Vector2(847, -1039)
 remote_path = NodePath("../../../../NPC2")
 
 [node name="Ruta6" type="Path2D" parent="NPCs/Rutas"]
@@ -312,7 +320,7 @@ curve = SubResource("Curve2D_8v40e")
 [node name="RutaFollow" type="PathFollow2D" parent="NPCs/Rutas/Ruta6"]
 
 [node name="Remoto" type="RemoteTransform2D" parent="NPCs/Rutas/Ruta6/RutaFollow"]
-position = Vector2(-29, -46)
+position = Vector2(-18, 1915)
 remote_path = NodePath("../../../../NPC3")
 
 [node name="Marcadores" type="Node" parent="."]
@@ -338,6 +346,21 @@ position = Vector2(179, 302)
 
 [node name="EdificioMecaFuera" type="Marker2D" parent="Marcadores"]
 position = Vector2(-2589.78, -470.393)
+
+[node name="EdificioK" type="Marker2D" parent="Marcadores"]
+position = Vector2(-1943, 214)
+
+[node name="EdificioQ" type="Marker2D" parent="Marcadores"]
+position = Vector2(-383, 360)
+
+[node name="EdificioA" type="Marker2D" parent="Marcadores"]
+position = Vector2(728, 11)
+
+[node name="EdificioLogistica" type="Marker2D" parent="Marcadores"]
+position = Vector2(-149, -2125)
+
+[node name="EstacionamientoAlberca" type="Marker2D" parent="Marcadores"]
+position = Vector2(1315, -1734)
 
 [node name="Transiciones" type="Node" parent="."]
 
@@ -487,6 +510,7 @@ offset_bottom = 1028.0
 color = Color(0, 0, 0, 1)
 
 [node name="Dialogo" type="AcceptDialog" parent="."]
+oversampling_override = 1.0
 title = "BIENVENIDO!"
 initial_position = 2
 size = Vector2i(700, 347)
@@ -500,9 +524,9 @@ Con M (o boton back) puedes ver las misiones por hacer.
 
 Los edificios visitables son: T, Ambiental, Mecatronica, X, Cristal y Gradas (Ensamble).
 
-Con E (o boton RT) puedes pegar a enemigos (Excepto a los que te atormentan desde el mas allá).
+Algunas misiones tienen varios pasos.
 
-Con T (O y) puedes comerte una tortita (Si es que tienes...)."
+Buena suerte explorando las instalaciones del ITToluca!"
 dialog_autowrap = true
 
 [connection signal="body_entered" from="NPCs/NPC4/Area" to="." method="_on_area_body_entered"]
