@@ -15,7 +15,10 @@ func cambia_escena(path:String) -> void:
 	layer = 1
 	$ANPFade.play("Fade_in")
 	await($ANPFade.animation_finished)
-	get_tree().change_scene_to_file(path)
+	if path == "res://source/screens/juego/mundo/mundo.tscn":
+		get_tree().change_scene_to_packed(THR_LOADER.get_scene())
+	else:
+		get_tree().change_scene_to_file(path)
 	$ANPFade.play_backwards("Fade_in")
 	await($ANPFade.animation_finished)
 	layer = -1

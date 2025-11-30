@@ -140,10 +140,12 @@ texture_scale = 1.5
 [node name="Orejas" type="AudioListener2D" parent="."]
 
 [node name="HUD" parent="." instance=ExtResource("3_i4ev6")]
+layer = 3
 
 [node name="pantPausa" parent="HUD" instance=ExtResource("4_xk7y5")]
 
 [node name="CapaTactil" parent="HUD" instance=ExtResource("5_0yiej")]
+layer = 2
 
 [node name="GameOver" parent="HUD" instance=ExtResource("6_etlm4")]
 layer = 5

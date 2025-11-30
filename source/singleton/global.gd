@@ -18,7 +18,7 @@ enum MarkerPosicion{mk_EdificioAmbSalon, mk_EdificioAmbEntrada, mk_EdificioAmbFu
 @onready var audioSFX = AudioServer.get_bus_index("SFX")
 @onready var audioVoz = AudioServer.get_bus_index("Voz")
 @onready var continuar_partida:bool = false
-@onready var controles_tactiles:bool = OS.get_name() == 'Android'
+@onready var controles_tactiles:bool = not ('Windows' or OS.get_name() == 'macOS')
 
 #Seccion personaje
 var jugador:Personaje_2
@@ -57,6 +57,7 @@ var nivelAudioVoz:float
 var file_path = "user://gamsesave.json" if OS.get_name() == "Android" or OS.get_name()== "macOS" else "res://gamesave.json"
 
 func _ready() -> void:
+	THR_LOADER.load_trigger("res://source/screens/juego/mundo/mundo.tscn")
 	#Carga de idioma activo
 	var lenguaje_settings = CONFIG_FILE.load_lenguaje_setting()
 	TranslationServer.set_locale(lenguaje_settings.lengua_activa)
@@ -68,7 +69,7 @@ func _ready() -> void:
 	pers_nombre = personaje_settings.nombre
 	pers_salud = personaje_settings.currentHealth
 	pers_tieneLampara = personaje_settings.tieneLampara
-	controles_tactiles = personaje_settings.contTactiles
+	#controles_tactiles = personaje_settings.contTactiles
 	#Carga de datos audio
 	var audio_settings = CONFIG_FILE.load_audio_setting()
 	nivelAudioMaster = audio_settings.master

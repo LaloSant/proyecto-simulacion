@@ -11,7 +11,7 @@ extends Node2D
 func _ready() -> void:
 	$VBoxContainer/btn_iniciar.grab_focus()
 	$VBoxContainer/btn_continuar.disabled = !SAVEFILE.existe_partida()
-	THR_LOADER.load_trigger("res://source/screens/menus/pant_creditos.tscn")
+	THR_LOADER.load_trigger("res://source/screens/juego/mundo/mundo.tscn")
 
 func _on_btn_iniciar_pressed() -> void:
 	GLOBAL.continuar_partida = false
@@ -33,11 +33,10 @@ func _on_btn_config_pressed() -> void:
 	SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_config.tscn")
 
 func _on_btn_creditos_pressed() -> void:
-	SCN_FADE_IN.cambia_escena_packed(THR_LOADER.get_scene())
-	#SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_creditos.tscn")
+	SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_creditos.tscn")
 
 func _on_btn_salir_pressed() -> void:
 	get_tree().quit()
-	
+
 #func _on_timer_video_intro_timeout() -> void:
 	#SCN_FADE_IN.cambia_escena("res://source/screens/menus/pant_video_intro.tscn")

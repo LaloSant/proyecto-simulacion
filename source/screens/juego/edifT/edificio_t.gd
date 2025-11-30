@@ -20,9 +20,6 @@ func _ready() -> void:
 		$Personaje.position = $TpNuevo/Entrada.position
 		$Personaje/HUD/lblInfo.text = "lbl_Pb"
 
-func _process(delta: float) -> void:
-	pass
-
 func _on_salon_p_1_tp_cambio_lugar() -> void:
 	$Personaje/HUD/lblInfo.text = "lbl_P1"
 

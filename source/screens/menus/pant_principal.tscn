@@ -21,6 +21,13 @@ bg_color = Color(0, 0, 0, 0.64705884)
 [node name="PantPrincipal" type="Node2D"]
 script = ExtResource("1_ut4m4")
 
+[node name="Musica" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xyw32")
+volume_db = 5.0
+autoplay = true
+bus = &"Musica"
+parameters/looping = true
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 64.0
 offset_top = 64.0
@@ -90,51 +97,39 @@ theme_override_font_sizes/font_size = 40
 theme_override_styles/normal = SubResource("StyleBoxFlat_hurmf")
 text = "btn_salir"
 
-[node name="Panel" type="Panel" parent="."]
-visible = false
-offset_right = 1280.0
-offset_bottom = 720.0
-
-[node name="Musica" type="AudioStreamPlayer" parent="Panel"]
-stream = ExtResource("3_xyw32")
-volume_db = 5.0
-autoplay = true
-bus = &"Musica"
-parameters/looping = true
-
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground"]
+[node name="Cielo" type="Sprite2D" parent="ParallaxBackground"]
 top_level = true
 position = Vector2(640, 358.5)
 scale = Vector2(3.34375, 2.808594)
 texture = ExtResource("4_ac2n8")
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="CapaNubes1" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(741, 47)
 motion_mirroring = Vector2(1700, 0)
 script = ExtResource("5_avx6v")
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+[node name="Nubes1" type="Sprite2D" parent="ParallaxBackground/CapaNubes1"]
 position = Vector2(356.5, -1)
 scale = Vector2(0.14606668, 0.1)
 texture = ExtResource("5_pb7it")
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="CapaNubes2" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(1700, 0)
 script = ExtResource("7_avx6v")
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+[node name="Nubes2" type="Sprite2D" parent="ParallaxBackground/CapaNubes2"]
 position = Vector2(1045, 96.99997)
 scale = Vector2(0.20920001, 0.2)
 texture = ExtResource("6_avx6v")
 
-[node name="Sprite2D3" type="Sprite2D" parent="ParallaxBackground"]
+[node name="Arboles" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(642.99994, 358.5)
 scale = Vector2(3.3437498, 2.808594)
 texture = ExtResource("9_xyw32")
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+[node name="Edificio" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(640.5, 359)
 scale = Vector2(3.356771, 2.8046875)
 texture = ExtResource("7_xyw32")

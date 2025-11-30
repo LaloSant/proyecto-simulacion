@@ -42,7 +42,7 @@ func carga_partida():
 	var jsonFile = FileAccess.open(file_path, FileAccess.READ)
 	var jsonString=jsonFile.get_as_text()
 	jsonFile.close()
-	var datos=JSON.parse_string(jsonString)
+	var datos = JSON.parse_string(jsonString)
 	GLOBAL.pers_salud = datos.salud
 	GLOBAL.pers_tieneLampara =datos.pers_tieneLampara
 	GLOBAL.pliego = datos.pliego
