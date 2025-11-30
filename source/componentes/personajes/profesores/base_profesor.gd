@@ -3,7 +3,7 @@ class_name Profesor extends CharacterBody2D
 @export_enum("Alma", "Maribel", "Ocayo", "Mauro", "NPC1", "NPC2", "NPC3", "NPC4") var character_name:String
 @export var ruta_follow:PathFollow2D
 @export var markers_aleatorios:Node
-@export var region:NavigationRegion2D
+#@export var region:NavigationRegion2D
 var marcadores:Array[Marker2D]
 var marker_a_seguir:Marker2D
 @onready var agente:NavigationAgent2D = $Agente
@@ -51,7 +51,7 @@ func actualizar_objetivo():
 	marker_a_seguir = marcadores[randi() % marcadores.size()]
 	agente.target_position = marker_a_seguir.position
 	puede_moverse = false
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(randi() % 7 + 3).timeout
 	puede_moverse = true
 
 func set_sprite():
